@@ -245,9 +245,9 @@ nav {
   position: absolute;
   top: 0;
   bottom: 0;
-  left: 2.5%;
-  width: 2px; /* Épaisseur de la ligne */
-  background: var(--medical-gray); /* Couleur de la ligne */
+  left: 2.25%;
+  width: 1px; /* Épaisseur de la ligne */
+  background: var(--medical-green); /* Couleur de la ligne */
   transform: translateX(-50%); /* Centrage précis */
 }
 
@@ -310,10 +310,11 @@ nav {
 #interests h2{
   margin-bottom: 1rem; /* Espacement en bas */
   font-size: var(--font-medium); /* Taille de police adaptative */
-  border-bottom: 2px solid var(--medical-gray); /* Ligne horizontale */
+  border-bottom: 1.5px solid var(--medical-green); /* Ligne horizontale */
   color: var(--medical-gray); /* Couleur du titre */
   padding-bottom: 0.5rem; /* Espacement entre le texte et la ligne */
 }
+
 #about h3, 
 #education h3, 
 #experience h3, 
@@ -363,7 +364,7 @@ nav {
 
 #projects h2, 
 #skills h2 {
-  border-bottom: 2px solid var(--medical-gray); /* Ligne horizontale */
+  border-bottom: 1.5px solid var(--medical-green); /* Ligne horizontale */
   font-size: var(--font-medium); /* Taille de police adaptative */
   color: var(--medical-gray);  /* Couleur du titre */
   padding-bottom: 0.5rem; /* Espacement entre le texte et la ligne */
@@ -405,16 +406,20 @@ nav {
 
 /* Section LinkedIn */
 #linkedin {
-  background: #ffffff;
+  background: var(--medical-green);
   padding: var(--section-padding);
   text-align: center;
+  border: 1.5px solid var(--medical-green); /* Bordure sur tous les côtés */
+  border-radius: var(--card-radius) var(--card-radius) 0 0; /* Pas d'arrondi en bas */
+  border-bottom: none; /* Supprime la bordure en bas */
 }
+
 
 /* Titres dans la section LinkedIn */
 #linkedin h2 {
   margin-bottom: 1rem;
   font-size: var(--font-medium);
-  color: var(--medical-gray);
+  color: var(--light-bg);
 }
 
 .linkedin-post h3 {
@@ -425,7 +430,7 @@ nav {
 
 .linkedin-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: clamp(1rem, 1.5vw, 1.5rem);
   margin-top: clamp(1rem, 2vw, 2rem);
 }
@@ -477,6 +482,9 @@ nav {
   background: #e6f7ff; /* couleur de fond */
   padding: var(--section-padding); /* Espacement adaptatif */
   text-align: center; /* Alignement centré */
+  border: 2px solid var(--medical-green); /* Bordure sur tous les côtés */
+  border-radius: 0 0 var(--card-radius) var(--card-radius); /* Pas d'arrondi en haut */
+  /* border-top: none;  Supprime la bordure en haut */
 }
 
 #cv h2 {
@@ -713,6 +721,13 @@ footer p {
   color: var(--text-light); /* Texte clair */
 }
 
+/* Ligne verticale centrale pour les timelines */
+.dark-mode .about-timeline::before,
+.dark-mode .timeline::before,
+.dark-mode .interests-timeline::before {
+  background: var(--medical-gray); /* Couleur de la ligne */
+}
+
 .dark-mode #about h2, 
 .dark-mode #education h2, 
 .dark-mode #experience h2, 
@@ -723,6 +738,21 @@ footer p {
 .dark-mode #cv h2, 
 .dark-mode #contact h2{
   color: var(--light-bg); /* Titre blanc */
+}
+
+.dark-mode #about h2, 
+.dark-mode #education h2, 
+.dark-mode #experience h2, 
+.dark-mode #interests h2,
+.dark-mode #projects h2, 
+.dark-mode  #skills h2,
+.dark-mode #linkedin h2{
+  border-bottom: 1.5px solid var(--medical-gray); /* Ligne horizontale */
+}
+
+.dark-mode #linkedin,
+.dark-mode #cv {
+  border: 1.5px solid var(--medical-gray); /* Bordure sur tous les côtés */
 }
 
 .dark-mode #about h3, 
