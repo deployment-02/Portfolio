@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - LAYIBE YAYIBE Narcisse</title>
+  <link rel="stylesheet" href="styles.css"> <!-- Assurez-vous que ce fichier pointe vers votre CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+  <!-- Bouton Mode Sombre/Clair -->
+<button id="theme-toggle" aria-label="Toggle Theme">
+  <span class="light-icon">☀️</span>
+  <span class="dark-icon">🌙</span>
+</button>
+
+  <!-- Header -->
+  <header>
+    <div class="profile-header">
+      <div class="profile-picture">
+        <img src="images/Photo.jpg" alt="Photo de profil">
+      </div>
+      <div class="profile-info">
+        <h1>LAYIBE YAYIBE Narcisse</h1>
+        <p>Data Scientist | Aspirant Data Engineer & MLOps | Passionné de l'IA</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-container">
+      <button id="menu-toggle">☰</button>
+      <ul id="nav-links">
+        <li><a href="#about">Accueil</a></li>
+        <li><a href="#education">À Propos</a></li>
+        <li><a href="#skills">Compétences</a></li>
+        <li><a href="#experience">Expériences</a></li>
+        <li><a href="#interests">Centres d'Intérêt</a></li>
+        <li><a href="#projects">Projets</a></li>
+        <li><a href="#linkedin">LinkedIn</a></li>
+        <li><a href="#cv">CV</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Contenu Principal -->
+  <main>
+    <!-- Section À Propos -->
+    <section id="about" class="container">
+      <h2>Qui je suis</h2>
+      <div class="about-timeline">
+        <div class="about-item">
+          <div class="about-icon">🎓</div>
+          <div class="about-content">
+            <h3>Parcours</h3>
+            <p>Actuellement en 3ᵉ année de Génie Informatique à l'Institut Ucac-Icam de Douala, je suis titulaire d'une licence en informatique spécialisée en Science des Données.</p>
+          </div>
+        </div>
+        <div class="about-item">
+          <div class="about-icon">💡</div>
+          <div class="about-content">
+            <h3>Passion</h3>
+            <p>Porté par une passion pour l’intelligence artificielle et l’analyse de données, j’aime exploiter les données pour résoudre des problèmes concrets et apporter des solutions innovantes.</p>
+          </div>
+        </div>
+        <div class="about-item">
+          <div class="about-icon">🎯</div>
+          <div class="about-content">
+            <h3>Objectif</h3>
+            <p>Mon objectif est d’exploiter mes compétences en science des données et intelligence artificielle pour relever des défis réels et contribuer à des projets à fort impact.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Éducation -->
+    <section id="education" class="container">
+      <h2>Mon cursus</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-icon">📚</div>
+          <div class="timeline-content">
+            <h3>Génie Informatique</h3>
+            <p>Institut Ucac-Icam, Douala (Cameroun)</p>
+            <p>Septembre 2024 - À présent</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-icon">🎓</div>
+          <div class="timeline-content">
+            <h3>Licence en Informatique</h3>
+            <p>Université de Yaoundé I, Yaoundé (Cameroun)</p>
+            <p>Octobre 2021 - Juillet 2024</p>
+            <p>Spécialisation : Data Science</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-icon">📜</div>
+          <div class="timeline-content">
+            <h3>Baccalauréat C</h3>
+            <p>Complexe Scolaire Elie Tao Baydo, Pala (Tchad)</p>
+            <p>Septembre 2020 - Août 2021</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Expériences -->
+    <section id="experience" class="container">
+      <h2>Mes expériences</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-icon">💼</div>
+          <div class="timeline-content">
+            <h3>Stage en Data Science</h3>
+            <p>Orabank, N'Djaména (Tchad)</p>
+            <p>Février 2025 - Avril 2025</p>
+            <p>Analyse et Prédiction d'Attrition des Employés chez Orabank</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-icon">💻</div>
+          <div class="timeline-content">
+            <h3>Développeur Web Junior</h3>
+            <p>Startup Locale, Yaoundé (Cameroun)</p>
+            <p>Juin 2022 - Août 2022</p>
+            <p>Développement d'une application web de gestion de bibliothèque avec Django, Bootstrap, HTML, CSS et JavaScript.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Centres d'Intérêt -->
+<section id="interests" class="container">
+  <h2>Centres d'Intérêt</h2>
+  <div class="interests-timeline">
+    <div class="interest-item">
+      <div class="interest-icon">📊</div>
+      <div class="interest-content">
+        <h3>Science des Données</h3>
+        <p>Passionné par l'analyse de données, le traitement du langage naturel (NLP) et la vision par ordinateur.</p>
+      </div>
+    </div>
+    <div class="interest-item">
+      <div class="interest-icon">🤖</div>
+      <div class="interest-content">
+        <h3>Intelligence Artificielle</h3>
+        <p>Exploration des modèles d'apprentissage automatique et profond pour résoudre des problèmes complexes.</p>
+      </div>
+    </div>
+    <div class="interest-item">
+      <div class="interest-icon">💾</div>
+      <div class="interest-content">
+        <h3>Data Engineering</h3>
+        <p>Conception de pipelines de données, gestion des infrastructures et optimisation des flux de données.</p>
+      </div>
+    </div>
+    <div class="interest-item">
+      <div class="interest-icon">⚙️</div>
+      <div class="interest-content">
+        <h3>MLOps</h3>
+        <p>Automatisation du déploiement et de la surveillance des modèles ML pour assurer leur scalabilité et robustesse.</p>
+      </div>
+    </div>
+    <div class="interest-item">
+      <div class="interest-icon">🎧</div>
+      <div class="interest-content">
+        <h3>Loisirs</h3>
+        <p>Musique, films, séries, football et lecture des livres inspirants (philosophie, mathématiques et développement personnel).</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section Compétences -->
+<section id="skills" class="container">
+  <h2>Mes compétences</h2>
+  <div class="skills-grid">
+
+     <!-- Machine & Deep Learning -->
+     <div class="skill">
+      <h3>Machine & Deep Learning</h3>
+      <ul>
+        <li>
+          <p>Apprentissage supervisé : Régression (linéaire, logistique), Naive Bayes, Arbre de décision, SVM, k-NN, PMC, CNN</p>
+        </li>
+        <li>
+          <p>Apprentissage non supervisé : K-means, K-medoids, CHA, CHD</p>
+        </li>
+        <li>
+          <p>Optimisation : Descente de gradiant, SMOTE</p>
+        </li>
+        <li>
+          <p>Pandas, Numpy, TensorFlow, Keras, Scikit-Learn, XGBoost, nnet, rpart</p>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Bases de Données -->
+    <div class="skill">
+      <h3>Bases de Données</h3>
+      <ul>
+        <li>
+          <p>Requêtage SQL & Modélisation de bases de données relationnelles, Gestion & Administration</p>
+        </li>
+        <li>
+          <p>MERISE, UML, ERD, SQL, SQL Developer, MySQL, PostgreSQL, Access, phpMyAdmin, MySQL Workbench, pgAdmin, DBeaver</p>
+        </li>
+      </ul>
+    </div>
+
+   <!-- Programmation -->
+   <div class="skill">
+    <h3>Programmation</h3>
+    <ul>
+      <li>
+        <p>Algorithmique, Programmation (système, procédurale, orientée objet), Structures de données</p>
+      </li>
+      <li>
+        <p>Python (traitement de données, machine learning, scripts automatisés, back-end), R (RShiny), Java, C++</p>
+      </li>
+    </ul>
+  </div>
+
+    <!-- Outils BI & ETL -->
+    <div class="skill">
+      <h3>Outils BI & ETL</h3>
+      <p>Microsoft Excel, Power BI, Talend Open Studio</p>
+    </div>
+
+    <!-- Développement Web -->
+    <div class="skill">
+      <h3>Développement Web</h3>
+      <p>Django, HTML, CSS, JavaScript, Bootstrap</p>
+    </div>
+
+    <!-- Autres Outils -->
+    <div class="skill">
+      <h3>Autres Outils</h3>
+      <p>Jupyter, Google Colab, VS Code, PyQt5, Qt, Git, GitHub, LaTeX, Google Suite</p>
+    </div>
+
+  </div>
+</section>
+    
+    <!-- Section Projets -->
+    <section id="projects" class="container">
+      <h2>Mes projets</h2>
+      <div class="projects-grid">
+        <div class="project">
+          <h3>Reconnaissance des Voyelles</h3>
+          <p>Développement d'un modèle de perceptron multicouches (PMC) capable de reconnaître avec précision les voyelles (a, e, i, o, u).</p>
+        </div>
+        <div class="project">
+          <h3>Simulation et Minimisation d'AFD</h3>
+          <p>Application Python pour la simulation et la minimisation d'automates finis déterministes (AFD) utilisant PyQt5 et PyGraphviz.</p>
+          <!-- <a href="https://github.com/layibe-02" target="_blank" class="project-link">Voir sur GitHub</a> -->
+        </div>
+        <div class="project">
+          <h3>Prédiction de l'Obésité</h3>
+          <p>Modèles ML pour prédire l'obésité avec Rshiny sur une base de données de 2111 enregistrements.</p>
+        </div>
+        <div class="project">
+          <h3>Bibliothèque Web</h3>
+          <p>Application web de gestion de bibliothèque avec Django, Bootstrap, HTML, CSS et JavaScript.</p>
+        </div>
+        <div class="project">
+          <h3>Gestion des Tontines</h3>
+          <p>Application de gestion des tontines au Cameroun avec Microsoft Access.</p>
+        </div>
+        <div class="project">
+          <h3>Gestion des Notes</h3>
+          <p>Développement d'une application pour gérer les notes des étudiants de l'Université de Yaoundé I.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section LinkedIn -->
+    <section id="linkedin" class="container">
+      <h2><i class="fab fa-linkedin"></i> Mes publications linkedIn</h2>
+      <div class="linkedin-grid">
+        <div class="linkedin-post">
+          <h3>Différences entre IA générative, IA autonome et AGI</h3>
+          <p>Comprendre les distinctions clés dans le monde de l'IA.</p>
+          <a href="https://www.linkedin.com/posts/layibe-yayibe-narcisse-ba2a34281_diff%C3%A9rences-entre-ia-g%C3%A9n%C3%A9rative-ia-agentique-activity-7288240212680318977-msIB?utm_source=share&utm_medium=member_desktop&rcm=ACoAAESsnKoBGqJz0rlvUdJeXUNvmNYAYIlVGGk" class="post-link">
+            <i class="fab fa-linkedin"></i> Lire la publication
+          </a>
+        </div>
+        <div class="linkedin-post">
+          <h3>Reconnaissance des Voyelles avec MLP</h3>
+          <p>Explication détaillée de mon projet de reconnaissance des voyelles latines avec un perceptron multicouches (MLP).</p>
+          <a href="https://www.linkedin.com/posts/layibe-yayibe-narcisse-ba2a34281_machinelearning-ai-innovation-activity-7227725267912257537-vAFM?utm_source=share&utm_medium=member_desktop&rcm=ACoAAESsnKoBGqJz0rlvUdJeXUNvmNYAYIlVGGk" class="post-link">
+            <i class="fab fa-linkedin"></i> Lire la publication
+          </a>
+        </div>
+        <div class="linkedin-post">
+          <h3>La magie de la Data Augmentation en IA</h3>
+          <p>Un guide pratique pour améliorer vos modèles d'IA.</p>
+          <a href="https://www.linkedin.com/posts/layibe-yayibe-narcisse-ba2a34281_la-magie-de-la-data-augmentation-en-ia-activity-7226990256070287360-CXbd?utm_source=share&utm_medium=member_desktop&rcm=ACoAAESsnKoBGqJz0rlvUdJeXUNvmNYAYIlVGGk" class="post-link">
+            <i class="fab fa-linkedin"></i> Lire la publication
+          </a>
+        </div>
+        <div class="linkedin-post">
+          <h3>Les Soft Skills en Data Science</h3>
+          <p>Découvrez les compétences non-techniques essentielles pour exceller dans ce domaine.</p>
+          <a href="https://www.linkedin.com/posts/layibe-yayibe-narcisse-ba2a34281_solf-skills-en-data-science-activity-7223404369134645248-auru?utm_source=share&utm_medium=member_desktop&rcm=ACoAAESsnKoBGqJz0rlvUdJeXUNvmNYAYIlVGGk" class="post-link">
+            <i class="fab fa-linkedin"></i> Lire la publication
+          </a>
+        </div>
+        <div class="linkedin-post">
+          <h3>Maîtriser la Prédiction : Classification vs Régression</h3>
+          <p>Découvrez les différences clés entre ces deux approches fondamentales du Machine Learning.</p>
+          <a href="https://www.linkedin.com/posts/layibe-yayibe-narcisse-ba2a34281_classifivation-vs-r%C3%A9gression-activity-7222905455595933696--PBa?utm_source=share&utm_medium=member_desktop&rcm=ACoAAESsnKoBGqJz0rlvUdJeXUNvmNYAYIlVGGk" class="post-link">
+            <i class="fab fa-linkedin"></i> Lire la publication
+          </a>
+        </div> 
+        <div class="linkedin-post">
+          <h3>Découvrez la Pyramide du Savoir en Data</h3>
+          <p>Comprendre comment les données brutes évoluent en insights stratégiques.</p>
+          <a href="https://www.linkedin.com/posts/layibe-yayibe-narcisse-ba2a34281_pyramide-diki-activity-7204506059107950592-cmoZ?utm_source=share&utm_medium=member_desktop&rcm=ACoAAESsnKoBGqJz0rlvUdJeXUNvmNYAYIlVGGk" class="post-link">
+            <i class="fab fa-linkedin"></i> Lire la publication
+          </a>
+        </div>  
+        <div class="linkedin-post">
+          <h3>Différences entre Machine Learning et Deep Learning</h3>
+          <p>Comprendre les distinctions clés entre ces deux approches de l'intelligence artificielle.</p>
+          <a href="https://www.linkedin.com/posts/layibe-yayibe-narcisse-ba2a34281_machine-learning-vs-deep-learning-activity-7203831143199055873-xl6T?utm_source=share&utm_medium=member_desktop&rcm=ACoAAESsnKoBGqJz0rlvUdJeXUNvmNYAYIlVGGk" class="post-link">
+            <i class="fab fa-linkedin"></i> Lire la publication
+          </a>
+        </div>
+        <div class="linkedin-post">
+          <h3>Comprendre les nuances entre Data Science, IA et Big Data</h3>
+          <p>Plongez dans les différences et synergies entre ces trois piliers de l'innovation technologique.</p>
+          <a href="https://www.linkedin.com/posts/layibe-yayibe-narcisse-ba2a34281_d%C3%A9cryptage-des-professions-de-donn%C3%A9es-partie-activity-7202629536184692736-rzBu?utm_source=share&utm_medium=member_desktop&rcm=ACoAAESsnKoBGqJz0rlvUdJeXUNvmNYAYIlVGGk" class="post-link">
+            <i class="fab fa-linkedin"></i> Lire la publication
+          </a>
+        </div>  
+        <div class="linkedin-post">
+          <h3>Comprendre les rôles de Data Scientist, Data Analyst et Data Engineer</h3>
+          <p>Dans un monde piloté par les données, il est crucial de comprendre les distinctions et complémentarités entre ces métiers.</p>
+          <a href="https://www.linkedin.com/posts/layibe-yayibe-narcisse-ba2a34281_d%C3%A9cryptage-des-professions-des-donn%C3%A9es-activity-7200471148105498625-Jp8A?utm_source=share&utm_medium=member_desktop&rcm=ACoAAESsnKoBGqJz0rlvUdJeXUNvmNYAYIlVGGk" class="post-link">
+            <i class="fab fa-linkedin"></i> Lire la publication
+          </a>
+        </div>                     
+      </div>
+    </section>
+
+    <!-- Section CV -->
+    <section id="cv" class="container">
+      <h2>Télécharger mon CV</h2>
+      <p>Pour plus de détails sur mon parcours académique et professionnel, vous pouvez télécharger mon CV ci-dessous :</p>
+      <a href="https://drive.google.com/file/d/1We0CFzmgoNUYjk0bZOYBlQKCG3PBTCTU/view?usp=sharing" download class="cv-button">
+        <i class="fas fa-file-pdf"></i> Télécharger CV
+      </a>
+    </section>
+
+    <!-- Section Contact -->
+     <!--
+    <section id="contact" class="container">
+      <h2>Contactez-Moi</h2>
+      <form action="#" method="POST">
+        <input type="text" placeholder="Nom" required>
+        <input type="email" placeholder="Email" required>
+        <textarea placeholder="Message" rows="5" required></textarea>
+        <button type="submit">Envoyer</button>
+      </form>
+    </section>
+     -->
+     <section id="contact" class="container">
+      <h2>Contactez-moi</h2>
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/layibe-yayibe-narcisse-ba2a34281/" target="_blank" class="linkedin">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/layibe-02" target="_blank" class="github">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="mailto:narcisse.layibe03@gmail.com" target="_blank">
+          <img src="images/gmail.png" alt="Logo Gmail" style="width:28px; height:28px; object-fit: contain;">
+        </a>
+                
+        <a href="https://wa.me/+237670431150" class="whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="https://www.facebook.com/layibenarcisse.yayibe" class="facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </div>
+    </section>
+    
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Layibé Yayibé Narcisse. Tous droits réservés.</p>
+  </footer>
+
+  <!-- Script pour le mode sombre/clair -->
+  <script>
+    const toggle = document.getElementById('theme-toggle');
+    const body = document.body;
+    toggle.addEventListener('click', () => {
+      body.classList.toggle('dark-mode');
+    });
+  </script>
+
+  <!-- Script pour la liste déroulante -->
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  </script>
+  
+</body>
+</html>
