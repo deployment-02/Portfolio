@@ -103,6 +103,7 @@ header {
 
 /* Conteneur pour la photo de profil et les informations */
 .profile-header {
+  margin-top: 4rem; /* Ajuste cet espace selon le besoin */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -855,7 +856,7 @@ footer p {
   left: 5px; /* Début hors écran à gauche */
   display: flex;
   gap: 10px;
-  background: #1a1a1a;
+  background: rgba(26, 26, 26, 0.7); /* Noir avec 70% d'opacité */
   padding: 10px 15px;
   border-radius: var(--border-radius);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -865,11 +866,11 @@ footer p {
 
 .dark-mode .lang-btn:hover {
   color: var(--medical-blue);
-  background: #1a1a1a;
+  background: rgba(26, 26, 26, 0.7);
 }
 
 .dark-mode .lang-btn {
-  background: #1a1a1a;
+  background: rgba(26, 26, 26, 0); /* Noir à 50% d'opacité */
   color: var(--light-bg);
 }
 
