@@ -109,14 +109,3 @@ toggleButton.addEventListener('click', () => {
 
 //------------------------------------------------------------------------------
 
-// Fonction pour animer l'apparition des boutons de traduction
-window.onload = () => {
-  const languageSwitcher = document.getElementById("language-switcher");
-  setTimeout(() => {
-    languageSwitcher.classList.add("show"); // Ajoute la classe pour déclencher l'animation
-  }, 500); // Délai de 500ms avant l'apparition
-
-  // Charger la langue préférée
-  const preferredLanguage = localStorage.getItem("preferredLanguage") || "fr";
-  switchLanguage(preferredLanguage);
-};
