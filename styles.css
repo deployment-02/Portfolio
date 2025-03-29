@@ -849,8 +849,89 @@ footer p {
   padding-left: 10px;
 }
 
+.dark-mode .language-switcher {
+  position: fixed;
+  top: 20px;
+  left: 5px; /* Début hors écran à gauche */
+  display: flex;
+  gap: 10px;
+  background: #1a1a1a;
+  padding: 10px 15px;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: left 0.5s ease-in-out; /* Animation de glissement depuis la gauche */
+  z-index: 1000;
+}
+
+.dark-mode .lang-btn:hover {
+  color: var(--medical-blue);
+  background: #1a1a1a;
+}
+
+.dark-mode .lang-btn {
+  background: #1a1a1a;
+  color: var(--light-bg);
+}
+
+.dark-mode .lang-btn.active-lang {
+  background: var(--medical-gray); /* Gris clair */
+  color: var(--light-bg); /* Texte noir pour plus de contraste */
+}
+
+/*================================================================
+14. LANGUAGE TRANSLATIONS
+   ========================================================================== */
+
+ /* Conteneur principal pour les boutons de traduction */
+ .language-switcher {
+  position: fixed;
+  top: 20px;
+  left: 5px; /* Début hors écran à gauche */
+  display: flex;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 10px 15px;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: left 0.5s ease-in-out; /* Animation de glissement depuis la gauche */
+  z-index: 1000;
+}
+
+/* Animation d'entrée */
+.language-switcher.show {
+  left: 20px; /* Position finale visible */
+}
+
+/* Style des boutons de langue */
+.lang-btn {
+  background: none;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.lang-btn:hover {
+  color: var(--medical-blue);
+  transform: scale(1.1); /* Effet de zoom au survol */
+}
+
+.lang-btn:focus {
+  outline: none;
+}
+
+/* Style pour la langue actuellement sélectionnée */
+.lang-btn.active-lang {
+  background: var(--medical-green); /* Gris clair */
+  color: var(--light-bg); /* Texte noir pour plus de contraste */
+  border-radius: var(--border-radius); /* Coins arrondis */
+  padding: 5px 10px; /* Ajouter un peu d'espace autour du texte */
+}
+
 /* ==========================================================================
-   14. RESPONSIVE DESIGN
+   15. RESPONSIVE DESIGN
    ========================================================================== */
 
 /* Styles pour les écrans de petite taille */
