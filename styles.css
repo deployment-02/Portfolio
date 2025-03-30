@@ -626,7 +626,7 @@ form button:hover {
   transition: transform var(--transition);
   text-decoration: none;
   display: inline-block; /* Assure un comportement cohérent */
-  background-color: var(--light-bg);
+  background: var(--light-bg);
   border-radius: 50%; /* Forme circulaire pour les icônes */
   width: 2.5rem; /* Taille fixe pour les icônes */
   height: 2.5rem; /* Taille fixe pour les icônes */
