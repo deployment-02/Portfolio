@@ -90,58 +90,101 @@ body {
 }
 
 /* ==========================================================================
-   3. HEADER
+   3. HEADER 
    ========================================================================== */
 
 /* Style global pour l'en-tête */
 header {
-  background-color: #e6f7ff; /* Bleu uniforme pour l'en-tête */
-  color: var(--medical-gray); /* Texte clair */
+  background-color: #e6f7ff; /* Bleu clair pour un effet professionnel */
+  color: var(--medical-gray); /* Texte en gris foncé */
   text-align: center;
-  padding: var(--section-padding) 0; /* Espacement vertical adaptatif */
+  padding: var(--section-padding) 0;
 }
 
 /* Conteneur pour la photo de profil et les informations */
 .profile-header {
-  margin-top: 4rem; /* Ajuste cet espace selon le besoin */
+  margin-top: 4rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: clamp(1rem, 2vw, 2rem); /* Espace entre les éléments */
-  flex-wrap: wrap; /* Permet le retour à la ligne sur les petits écrans */
+  gap: clamp(1rem, 2vw, 2rem);
+  flex-wrap: wrap;
 }
 
 /* Photo de profil */
 .profile-picture img {
-  width: clamp(150px, 20vw, 200px); /* Taille adaptative */
+  width: clamp(150px, 20vw, 200px);
   height: clamp(150px, 20vw, 200px);
-  border-radius: 50%; /* Forme circulaire */
-  object-fit: cover; /* Ajuste l'image sans déformation */
-  box-shadow: var(--shadow); /* Ajoute une ombre légère */
-  transition: transform var(--transition); /* Animation au survol */
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  border: 0.5px solid var(--light-bg);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
 /* Effet d'agrandissement au survol */
 .profile-picture img:hover {
-  transform: scale(1.12345);
+  transform: scale(1.15);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
 
-/* Informations personnelles */
+/* Informations personnelles - Nom avec effet de gradient */
 .profile-info h1 {
-  font-size: var(--font-medium); /* Titre principal */
-  margin-bottom: 0.5rem;
+  font-size: clamp(1rem, 2vw, 2.5rem);
+  font-weight: bold;
+  background: linear-gradient(45deg, var(--medical-gray), var(--medical-green));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1s ease-in-out;
 }
 
+.dark-mode .profile-info h1 {
+  font-size: clamp(1rem, 2vw, 2.5rem);
+  font-weight: bold;
+  background: linear-gradient(45deg, var(--light-bg), var(--medical-blue));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Animation d'apparition fluide */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Description sous le nom */
 .profile-info p {
-  font-size: var(--font-small); /* Paragraphe */
-  margin-bottom: 1rem;
+  font-size: clamp(0.5rem, 1vw, 1.3rem);
+  color: var(--medical-gray);
+  font-style: italic;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.8));
+  border-radius: 8px;
+  padding: 10px 15px;
+}
+
+.dark-mode .profile-info p {
+  font-size: clamp(0.5rem, 1vw, 1.3rem);
+  color: var(--light-bg);
+  font-style: italic;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.1));
+  border-radius: 8px;
+  padding: 10px 15px;
 }
 
 /* Liens des réseaux sociaux */
 .social-links {
   display: flex;
   justify-content: center;
-  gap: clamp(10px, 1.5vw, 15px); /* Espace entre les icônes */
+  gap: clamp(10px, 1.5vw, 15px);
   margin-top: 1rem;
 }
 
@@ -149,21 +192,21 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: clamp(40px, 3vw, 50px); /* Taille adaptative */
+  width: clamp(40px, 3vw, 50px);
   height: clamp(40px, 3vw, 50px);
-  border-radius: 50%; /* Forme circulaire */
-  background: var(--medical-blue); /* Couleur de fond */
-  color: var(--text-light); /* Couleur de l'icône */
-  font-size: clamp(1.2rem, 2vw, 1.5rem); /* Taille de l'icône */
-  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Ombre légère */
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--medical-blue), var(--medical-green));
+  color: #fff;
+  font-size: clamp(1.3rem, 2vw, 1.8rem);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
-/* Effets au survol des icônes des réseaux sociaux */
+/* Animation au survol */
 .social-links a:hover {
-  transform: scale(1.1); /* Légère augmentation de taille */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Ombre plus prononcée */
-  background: var(--medical-green); /* Changement de couleur */
+  transform: scale(1.2);
+  background: linear-gradient(135deg, var(--medical-green), var(--medical-blue));
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
 }
 
 /* ==========================================================================
@@ -858,7 +901,7 @@ footer p {
   gap: 10px;
   background: rgba(26, 26, 26, 0.8); /* Noir avec 70% d'opacité */
   padding: 5px 15px;
-  border-radius: 30px;
+  border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: left 0.5s ease-in-out; /* Animation de glissement depuis la gauche */
   z-index: 1000;
@@ -893,7 +936,7 @@ footer p {
   gap: 10px;
   background: rgba(255, 255, 255, 0.9);
   padding: 5px 15px;
-  border-radius: 30px;
+  border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: left 0.5s ease-in-out; /* Animation de glissement depuis la gauche */
   z-index: 1000;
