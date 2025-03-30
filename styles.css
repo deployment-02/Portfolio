@@ -60,7 +60,7 @@ body {
 /* Bouton pour basculer entre le mode clair et sombre */
 #theme-toggle {
   position: fixed;
-  top: 1rem;
+  top: 1.25rem;
   right: 1rem;
   background: none;
   border: none;
