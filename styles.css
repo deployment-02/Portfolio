@@ -163,7 +163,7 @@ header {
 
 /* Description sous le nom */
 .profile-info p {
-  font-size: clamp(0.5rem, 1vw, 1.3rem);
+  font-size: clamp(0.8rem, 1vw, 1.3rem);
   color: var(--medical-gray);
   font-style: italic;
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.8));
