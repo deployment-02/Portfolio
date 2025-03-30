@@ -163,18 +163,16 @@ header {
 
 /* Description sous le nom */
 .profile-info p {
-  font-size: clamp(0.6rem, 1vw, 1.3rem);
+  font-size: clamp(0.8rem, 1vw, 1.3rem);
   color: var(--medical-gray);
-  font-style: italic;
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.8));
   border-radius: 8px;
   padding: 10px 15px;
 }
 
 .dark-mode .profile-info p {
-  font-size: clamp(0.6rem, 1vw, 1.3rem);
+  font-size: clamp(0.8rem, 1vw, 1.3rem);
   color: var(--light-bg);
-  font-style: italic;
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.1));
   border-radius: 8px;
   padding: 10px 15px;
@@ -214,7 +212,7 @@ header {
    ========================================================================== */
 :root{
   --font-medium: clamp(0.8rem, 1.3vw, 1.5rem);
-  --font-small: clamp(0.6rem, 1vw, 1.3rem);
+  --font-small: clamp(0.8rem, 1vw, 1.3rem);
 }
 
 /* Barre de navigation */
@@ -992,11 +990,11 @@ footer p {
 
   /* Application des tailles de police adaptatives */
   p {
-    font-size: 0.7rem; /* clamp(0.7rem, 1vw, 1.3rem) */
+    font-size: 0.8rem; /* clamp(0.7rem, 1vw, 1.3rem) */
   }
 
   h2, h3 {
-    font-size: 0.8rem; /* clamp(0.8rem, 1.3vw, 1.5rem) */
+    font-size: 0.9rem; /* clamp(0.8rem, 1.3vw, 1.5rem) */
   }
 
   /* Affichage du bouton de menu pour les petits écrans */
@@ -1023,7 +1021,7 @@ footer p {
     box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
     border-right: 1px solid #ccc;
     border-radius: var(--border-radius);
-    font-size: 0.7rem;
+    font-size: 0.8rem;
   }
 
   /* Affichage des liens lorsque le menu est actif */
