@@ -1052,4 +1052,8 @@ footer p {
   .profile-info p {
     font-size: 0.7rem;
   }
+
+  .dark-mode .profile-info p {
+    font-size: 0.7rem;
+  }
 }
