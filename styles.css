@@ -212,6 +212,10 @@ header {
 /* ==========================================================================
    4. NAVIGATION
    ========================================================================== */
+:root{
+  --font-medium: clamp(0.8rem, 1.3vw, 1.5rem);
+  --font-small: clamp(0.6rem, 1vw, 1.3rem);
+}
 
 /* Barre de navigation */
 nav {
@@ -263,10 +267,6 @@ nav {
 /* ==========================================================================
    5. CONTENEUR PRINCIPAL ET SECTIONS
    ========================================================================== */
-:root{
-  --font-medium: clamp(0.8rem, 1.3vw, 1.5rem);
-  --font-small: clamp(0.6rem, 1vw, 1.3rem);
-}
 /* Conteneur principal centré */
 .container {
   max-width: 1200px; /* Largeur maximale */
@@ -984,21 +984,28 @@ footer p {
 
 /* Styles pour les écrans de petite taille */
 @media (max-width: 768px) {
-
   :root {
     --section-padding: 0.8rem;
-    --font-medium: 0.9rem;
-    --font-small: 0.8rem;
+    --font-medium: clamp(0.8rem, 1.3vw, 1.5rem);
+    --font-small: clamp(0.7rem, 1vw, 1.3rem);
   }
 
-  .p {
-    font-size: 0.6rem;
+  /* Application des tailles de police adaptatives */
+  p {
+    font-size: 0.7rem; /* clamp(0.7rem, 1vw, 1.3rem) */
   }
 
+  h2, h3 {
+    font-size: 0.8rem; /* clamp(0.8rem, 1.3vw, 1.5rem) */
+  }
+
+  /* Affichage du bouton de menu pour les petits écrans */
   #menu-toggle {
     display: block; /* Affiche le bouton de menu */
+    font-size: 0.8rem;
   }
 
+  /* Masquage des liens de navigation par défaut */
   #nav-links {
     display: none; /* Masqué par défaut */
     flex-direction: column;
@@ -1006,22 +1013,22 @@ footer p {
     background: var(--medical-green);
     padding: clamp(0.5rem, 1vw, 1rem);
     position: absolute;
-    top: 3.7rem; 
+    top: 3.7rem;
     left: 0;
     width: 25vw;
     max-width: 350px;
     min-width: 200px;
     height: auto;
     z-index: 9999;
-    box-shadow: 2px 0 10px rgba(0,0,0,0.2);
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
     border-right: 1px solid #ccc;
     border-radius: var(--border-radius);
-     /* border-top-left-radius: 0; /* Aucun arrondi si tu veux un angle net */
-     /* border-bottom-right-radius: 8px; /* optionnel pour du style */
-  }  
+    font-size: 0.7rem;
+  }
 
+  /* Affichage des liens lorsque le menu est actif */
   #nav-links.active {
-    display: flex; /* Affiche les liens lorsque le menu est actif */
+    display: flex;
   }
 
   /* Ajustements pour les timelines */
@@ -1038,9 +1045,16 @@ footer p {
   }
 
   /* Grille Projects et LinkedIn en une colonne */
-  .skills-project,
+  .skills-grid,
   .projects-grid,
   .linkedin-grid {
     grid-template-columns: 1fr; /* Une seule colonne */
+  }
+
+  /* Taille de police adaptative pour les éléments internes */
+  #skill ul li p,
+  #skills-grid #skill p,
+  #projects-grid #project p {
+    font-size: var(--font-small); /* clamp(0.7rem, 1vw, 1.3rem) */
   }
 }
