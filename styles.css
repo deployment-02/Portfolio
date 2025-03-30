@@ -1049,10 +1049,7 @@ footer p {
     grid-template-columns: 1fr; /* Une seule colonne */
   }
 
-  /* Taille de police adaptative pour les éléments internes */
-  #skill ul li p,
-  #skills-grid #skill p,
-  #projects-grid #project p {
-    font-size: var(--font-small); /* clamp(0.7rem, 1vw, 1.3rem) */
+  .profile-info p {
+    font-size: 0.7rem;
   }
 }
