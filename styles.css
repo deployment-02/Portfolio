@@ -987,8 +987,12 @@ footer p {
 
   :root {
     --section-padding: 0.8rem;
-    --font-medium: 0.8rem;
-    --font-small: 0.6rem;
+    --font-medium: 0.9rem;
+    --font-small: 0.8rem;
+  }
+
+  .p {
+    font-size: var(--font-small);
   }
 
   #menu-toggle {
