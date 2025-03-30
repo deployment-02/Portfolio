@@ -445,6 +445,13 @@ nav {
   margin-bottom: 10px;
 }
 
+#projects .projects-grid .project img {
+  width: 100%; /* Assurez-vous que l'image prend toute la largeur */
+  height: auto; /* Garde le ratio de l'image */
+  border-radius: var(--card-radius); /* Applique les mêmes styles aux images */
+  margin-bottom: 10px; /* Espacement entre l'image et le titre */
+}
+
 /* ==========================================================================
    7. SECTION LINKEDIN
    ========================================================================== */
