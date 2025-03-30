@@ -419,7 +419,7 @@ nav {
 /* Titres dans la section LinkedIn */
 #linkedin h2 {
   margin-bottom: 1rem;
-  border-bottom: 1.5px solid var(--light-bg); /* Ligne horizontale */
+  border-bottom: 1px solid #e6f7ff; /* Ligne horizontale */
   font-size: var(--font-medium);
   color: var(--light-bg);
 }
@@ -752,7 +752,7 @@ footer p {
 }
 
 .dark-mode #linkedin h2{
-  border-bottom: 1.5px solid var(--text-light); /* Ligne horizontale */
+  border-bottom: 1px solid #e6f7ff; /* Ligne horizontale */
 }
 
 .dark-mode #linkedin,
