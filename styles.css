@@ -742,7 +742,7 @@ footer p {
 }
 
 .dark-mode #nav-links li a:hover {
-  background-color: var(--medical-green); /* Changement de couleur */
+  background: var(--medical-blue); /* Changement de couleur */
 }
 
 /* Icônes des réseaux sociaux en mode sombre */
@@ -877,7 +877,7 @@ footer p {
 }
 
 .dark-mode .cv-button:hover {
-  background-color: var(--medical-green); /* Changement de couleur */
+  background-color: var(--medical-blue); /* Changement de couleur */
 }
 
 .dark-mode #linkedin {
@@ -895,7 +895,7 @@ footer p {
 }
 
 .dark-mode .post-link:hover {
-  background-color: var(--medical-green); /* Changement de couleur */
+  background-color: var(--medical-blue); /* Changement de couleur */
 }
 
 .dark-mode #contact h2 {
@@ -964,7 +964,7 @@ footer p {
 }
 
 .dark-mode .lang-btn.active-lang {
-  background: var(--medical-gray); /* Gris clair */
+  background: var(--medical-blue); /* Gris clair */
   color: var(--light-bg); /* Texte noir pour plus de contraste */
 }
 
@@ -1018,38 +1018,6 @@ footer p {
   color: var(--light-bg); /* Texte noir pour plus de contraste */
   border-radius: var(--border-radius); /* Coins arrondis */
   padding: 5px 10px; /* Ajouter un peu d'espace autour du texte */
-}
-
- 
-
- /* Style for the back-to-top button */
-#back-to-top {
-  display: none; /* Hidden by default */
-  position: fixed;
-  bottom: 2rem; /* Distance from the bottom */
-  right: 2rem; /* Distance from the right */
-  background-color: var(--medical-green); /* Background color */
-  color: var(--text-light); /* Icon color */
-  width: 40px; /* Button size */
-  height: 40px; /* Button size */
-  border: none; /* No border */
-  border-radius: 50%; /* Circular shape */
-  font-size: 1.5rem; /* Icon size */
-  cursor: pointer; /* Pointer cursor on hover */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
-  z-index: 9999; /* Ensure it stays above other elements */
-}
-
-/* Hover effect for the back-to-top button */
-#back-to-top:hover {
-  background-color: var(--medical-gray); /* Darker background on hover */
-  transform: scale(1.1); /* Slight zoom effect */
-}
-
-/* Show the button only when scrolling down */
-.show {
-  display: block;
 }
 
 /* ==========================================================================
