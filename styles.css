@@ -526,6 +526,14 @@ nav {
   transform: scale(1.05);
 }
 
+/* Ajout de style pour les images */
+.linkedin-post img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--card-radius);
+  margin-bottom: 1rem;
+}
+
 /* ==========================================================================
    8. SECTION CV
    ========================================================================== */
