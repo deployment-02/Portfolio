@@ -461,40 +461,55 @@ nav {
   background: var(--medical-green);
   padding: var(--section-padding);
   text-align: center;
-  border: 1.5px solid var(--medical-green); /* Bordure sur tous les côtés */
-  border-radius: var(--card-radius) var(--card-radius) 0 0; /* Pas d'arrondi en bas */
-  border-bottom: none; /* Supprime la bordure en bas */
+  border: 1.5px solid var(--medical-green);
+  border-radius: var(--card-radius) var(--card-radius) 0 0;
+  border-bottom: none;
+  position: relative;  /* Nécessaire pour positionner les flèches */
 }
 
-
-/* Titres dans la section LinkedIn */
-#linkedin h2 {
-  margin-bottom: 1rem;
-  border-bottom: 1px solid #e6f7ff; /* Ligne horizontale */
-  font-size: var(--font-medium);
+/* Flèches de défilement */
+.scroll-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;  /* Taille de la flèche */
   color: var(--light-bg);
+  cursor: pointer;
+  z-index: 10;  /* S'assurer que les flèches sont au-dessus du contenu */
 }
 
-.linkedin-post h3 {
-  margin-bottom: 1rem;
-  font-size: var(--font-small);
+.left-arrow {
+  left: 5px;
+}
+
+.right-arrow {
+  right: 5px;
+}
+
+/* Flèches en survol */
+.scroll-arrow:hover {
   color: var(--medical-gray);
 }
 
+/* Grille avec défilement horizontal */
 .linkedin-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  overflow-x: auto;
   gap: clamp(1rem, 1.5vw, 1.5rem);
   margin-top: clamp(1rem, 2vw, 2rem);
+  scroll-snap-type: x mandatory;
+  padding-bottom: 1rem;  /* Pour laisser de l'espace pour les flèches */
 }
 
-/* Publication LinkedIn */
 .linkedin-post {
   background: #e6f7ff;
   padding: clamp(1rem, 1.5vw, 1.5rem);
   border-radius: var(--card-radius);
   box-shadow: var(--shadow);
   transition: transform var(--transition), box-shadow var(--transition);
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  width: 300px;
 }
 
 .linkedin-post:hover {
@@ -505,8 +520,7 @@ nav {
 /* Contenu de la publication */
 .linkedin-post p {
   color: var(--text-black);
-  margin-bottom: 1rem;
-  font-size: var(--font-small);
+  margin-bottom: 0.5rem;
 }
 
 /* Lien vers la publication */
@@ -556,7 +570,6 @@ nav {
 
 #cv p {
   margin-bottom: 1rem; /* Espacement en bas */
-  font-size: var(--font-small); /* Taille de police adaptative */
 }
 
 /* Bouton de téléchargement du CV */
@@ -573,10 +586,6 @@ nav {
   transition: background-color var(--transition), transform var(--transition); /* Transition fluide */
   box-shadow: var(--shadow); /* Ombre légère */
   gap: 0.5rem; /* Espace entre l'icône et le texte */
-}
-
-#cv p {
-  font-size: var(--font-small); /* Taille de police adaptative */
 }
 
 /* Icône du bouton CV */
@@ -810,9 +819,9 @@ footer p {
   border-bottom: 1.5px solid var(--medical-gray); /* Ligne horizontale */
 }
 
-.dark-mode #linkedin h2{
+/* .dark-mode #linkedin h2{
   border-bottom: 1px solid #e6f7ff; /* Ligne horizontale */
-}
+/*} */
 
 .dark-mode #linkedin,
 .dark-mode #cv {
