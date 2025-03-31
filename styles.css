@@ -467,15 +467,23 @@ nav {
   position: relative;  /* Nécessaire pour positionner les flèches */
 }
 
+#linkedin h2 {
+  color: var(--light-bg);
+}
+
 /* Flèches de défilement */
 .scroll-arrow {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  font-size: 2rem;  /* Taille de la flèche */
-  color: var(--light-bg);
+  font-size: 1rem;  /* Taille de la flèche */
+  color: var(--medical-gray);
   cursor: pointer;
   z-index: 10;  /* S'assurer que les flèches sont au-dessus du contenu */
+}
+
+.dark-mode .scroll-arrow {
+  color: var(--light-bg);
 }
 
 .left-arrow {

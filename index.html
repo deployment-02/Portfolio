@@ -692,6 +692,28 @@
       switchLanguage(preferredLanguage);
     };
 
+    // Sélectionner les flèches et la grille
+const leftArrow = document.querySelector('.left-arrow');
+const rightArrow = document.querySelector('.right-arrow');
+const linkedinGrid = document.querySelector('.linkedin-grid');
+
+// Fonction pour faire défiler vers la gauche
+leftArrow.addEventListener('click', () => {
+  linkedinGrid.scrollBy({
+    left: -300, // Ajuste cette valeur pour le nombre de pixels à défiler
+    behavior: 'smooth'  // Effet de défilement fluide
+  });
+});
+
+// Fonction pour faire défiler vers la droite
+rightArrow.addEventListener('click', () => {
+  linkedinGrid.scrollBy({
+    left: 300,  // Ajuste cette valeur pour le nombre de pixels à défiler
+    behavior: 'smooth'  // Effet de défilement fluide
+  });
+});
+
+
 </script>
 </body>
 </html>
