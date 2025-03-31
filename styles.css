@@ -458,7 +458,7 @@ nav {
 
 /* Section LinkedIn */
 #linkedin {
-  background: none;
+  background: var(--light-bg);
   padding: var(--section-padding);
   text-align: center;
   border: 1.5px solid var(--medical-green);
@@ -515,14 +515,21 @@ nav {
 }
 
 .linkedin-post {
-  background: #ffffff;
+  background: var(--text-light);
   padding: 0.5rem;
+  margin-top: 0.5rem;
+  border: 0.01px solid var(--medical-green);
   border-radius: var(--card-radius);
   box-shadow: var(--shadow);
-  transition: transform var(--transition), box-shadow var(--transition);
+  transition: transform 0.3s ease; /* Transition fluide */
   flex: 0 0 auto;
   scroll-snap-align: start;
   width: 300px;
+}
+
+.dark-mode .linkedin-post {
+  background: var(--dark-bg);
+  border: 0.01px solid var(--medical-gray);
 }
 
 .linkedin-post:hover {
@@ -567,7 +574,7 @@ nav {
 
 /* Section CV */
 #cv {
-  background: #ffffff; /*#e6f7ff;  couleur de fond */
+  background: var(--text-light); /*#e6f7ff;  couleur de fond */
   padding: var(--section-padding); /* Espacement adaptatif */
   text-align: center; /* Alignement centré */
   border: 1px solid var(--medical-green); /* Bordure sur tous les côtés */
@@ -874,7 +881,7 @@ footer p {
 }
 
 .dark-mode #linkedin {
-  background: #444; /* Fond gris */
+  background: #000000; /* Fond gris */
   color: var(--text-light); /* Texte clair */
 }
 
@@ -1013,6 +1020,38 @@ footer p {
   padding: 5px 10px; /* Ajouter un peu d'espace autour du texte */
 }
 
+ 
+
+ /* Style for the back-to-top button */
+#back-to-top {
+  display: none; /* Hidden by default */
+  position: fixed;
+  bottom: 2rem; /* Distance from the bottom */
+  right: 2rem; /* Distance from the right */
+  background-color: var(--medical-green); /* Background color */
+  color: var(--text-light); /* Icon color */
+  width: 40px; /* Button size */
+  height: 40px; /* Button size */
+  border: none; /* No border */
+  border-radius: 50%; /* Circular shape */
+  font-size: 1.5rem; /* Icon size */
+  cursor: pointer; /* Pointer cursor on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+  z-index: 9999; /* Ensure it stays above other elements */
+}
+
+/* Hover effect for the back-to-top button */
+#back-to-top:hover {
+  background-color: var(--medical-gray); /* Darker background on hover */
+  transform: scale(1.1); /* Slight zoom effect */
+}
+
+/* Show the button only when scrolling down */
+.show {
+  display: block;
+}
+
 /* ==========================================================================
    15. RESPONSIVE DESIGN
    ========================================================================== */
@@ -1110,3 +1149,4 @@ footer p {
     font-size: 0.7rem;
   }
 }
+
