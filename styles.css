@@ -460,7 +460,7 @@ nav {
 /* Section LinkedIn */
 #linkedin {
   background: var(--light-bg);
-  padding: 1.5rem;
+  padding: 1.6rem;
   text-align: center;
   border: 1.5px solid var(--medical-green);
   border-radius: var(--card-radius) var(--card-radius) 0 0;
