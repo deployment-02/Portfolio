@@ -11,6 +11,7 @@
 
 /* Variables globales pour la personnalisation */
 :root {
+  --gray-blue: #64748B; /* Gris bleuté */
   --primary-color: #0073e6; /* Bleu médical principal */
   --secondary-color: #005bb5; /* Bleu plus foncé */
   --dark-bg: #121212; /* Fond sombre pour le mode sombre */
@@ -459,7 +460,7 @@ nav {
 /* Section LinkedIn */
 #linkedin {
   background: var(--light-bg);
-  padding: var(--section-padding);
+  padding: 2rem;
   text-align: center;
   border: 1.5px solid var(--medical-green);
   border-radius: var(--card-radius) var(--card-radius) 0 0;
