@@ -166,7 +166,7 @@ header {
   font-size: clamp(0.8rem, 1vw, 1.3rem);
   color: var(--medical-gray);
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.8));
-  border-radius: 30px;
+  border-radius: 8px;
   padding: 10px 15px;
 }
 
@@ -174,7 +174,7 @@ header {
   font-size: clamp(0.8rem, 1vw, 1.3rem);
   color: var(--light-bg);
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.1));
-  border-radius: 30px;
+  border-radius: 8px;
   padding: 10px 15px;
 }
 
@@ -549,7 +549,7 @@ nav {
   background: var(--medical-green);
   color: var(--text-light);
   padding: clamp(0.25rem, 0.4vw, 0.4rem) clamp(0.5rem, 0.8vw, 0.8rem);
-  border-radius: 30px;
+  border-radius: var(--card-radius);
   text-decoration: none;
   font-size: var(--font-small);
   transition: background-color var(--transition), transform var(--transition);
@@ -600,7 +600,7 @@ nav {
   background: var(--medical-green); /* Couleur de fond */
   color: var(--text-light); /* Texte clair */
   padding: clamp(0.25rem, 0.4vw, 0.4rem) clamp(0.5rem, 0.8vw, 0.8rem); /* Espacement interne adaptatif */
-  border-radius: 30px;  /* Coins arrondis */
+  border-radius: var(--card-radius); /* Coins arrondis */
   text-decoration: none; /* Supprime le soulignement */
   font-size: var(--font-small); /* Taille de police adaptative */
   transition: background-color var(--transition), transform var(--transition); /* Transition fluide */
@@ -877,7 +877,7 @@ footer p {
 }
 
 .dark-mode .cv-button:hover {
-  background: var(--medical-blue); /* Changement de couleur */
+  background-color: var(--medical-blue); /* Changement de couleur */
 }
 
 .dark-mode #linkedin {
@@ -945,8 +945,8 @@ footer p {
   display: flex;
   gap: 10px;
   background: rgba(26, 26, 26, 0.8); /* Noir avec 70% d'opacité */
-  padding: 5px 6px;
-  border-radius: 30px;
+  padding: 5px 10px;
+  border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: left 0.5s ease-in-out; /* Animation de glissement depuis la gauche */
   z-index: 1000;
@@ -955,7 +955,7 @@ footer p {
 .dark-mode .lang-btn:hover {
   color: var(--text-light);
   background: rgba(26, 26, 26, 0.7);
-  border-radius: 30px;
+  border-radius: var(--border-radius);
 }
 
 .dark-mode .lang-btn {
@@ -980,8 +980,8 @@ footer p {
   display: flex;
   gap: 10px;
   background: rgba(255, 255, 255, 0.9);
-  padding: 5px 6px;
-  border-radius: 30px;
+  padding: 5px 10px;
+  border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: left 0.5s ease-in-out; /* Animation de glissement depuis la gauche */
   z-index: 1000;
@@ -1005,7 +1005,7 @@ footer p {
 .lang-btn:hover {
   color: var(--medical-blue);
   transform: scale(1.1); /* Effet de zoom au survol */
-  border-radius: 30px;
+  border-radius: var(--border-radius);
 }
 
 .lang-btn:focus {
@@ -1016,7 +1016,7 @@ footer p {
 .lang-btn.active-lang {
   background: var(--medical-green); /* Gris clair */
   color: var(--light-bg); /* Texte noir pour plus de contraste */
-  border-radius: 30px; /* Coins arrondis */
+  border-radius: var(--border-radius); /* Coins arrondis */
   padding: 5px 10px; /* Ajouter un peu d'espace autour du texte */
 }
 
