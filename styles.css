@@ -65,11 +65,11 @@ body {
 /* Bouton pour basculer entre le mode clair et sombre */
 #theme-toggle {
   position: fixed;
-  top: 1.4rem;
+  top: 1rem;
   right: 1rem;
   background: none;
   border: none;
-  font-size: clamp(1.5rem, 2vw, 2rem); /* Taille adaptative pour les icônes */
+  font-size: clamp(1rem, 1.5vw, 1.5rem); /* Taille adaptative pour les icônes */
   cursor: pointer;
   z-index: 1000; /* S'assure qu'il reste au-dessus des autres éléments */
   transition: color var(--transition); /* Transition fluide pour la couleur */
@@ -748,10 +748,13 @@ form button:hover {
    11. SECTION CONTACTS
    ========================================================================== */
 
+/* Section Contact */
 #contact h2 {
-  text-align: center;
-  color: var(--medical-gray);
-  font-size: var(--font-medium);
+  margin-bottom: 1rem; /* Espacement en bas */
+  font-size: var(--font-medium); /* Taille de police adaptative */
+  color: var(--medical-gray); /* Couleur du titre */
+  border-bottom: 1.5px solid var(--medical-green); /* Ligne horizontale */
+  padding-bottom: 0.5rem; /* Espacement entre le texte et la ligne */
 }
 
 .social-links a {
@@ -1043,14 +1046,14 @@ footer p {
 }
 
 .dark-mode .lang-btn:hover {
-  color: var(--dark-bg);
-  background: var(--light-bg);
+  color: var(--light-bg);
+  background: rgba(26, 26, 26, 0);
   border-radius: var(--border-radius);
 }
 
 .dark-mode .lang-btn {
   background: rgba(26, 26, 26, 0); /* Noir à 50% d'opacité */
-  color: var(--dark-bg);
+  color: var(--light-bg);
 }
 
 .dark-mode .lang-btn.active-lang {
@@ -1213,7 +1216,7 @@ footer p {
     right: 1rem;
     background: none;
     border: none;
-    font-size: clamp(1.5rem, 2vw, 2rem); /* Taille adaptative pour les icônes */
+    font-size: clamp(0.8rem, 1.5vw, 1.5rem); /* Taille adaptative pour les icônes */
     cursor: pointer;
     z-index: 10001; /* S'assure qu'il reste au-dessus des autres éléments */
     transition: color var(--transition); /* Transition fluide pour la couleur */
@@ -1226,11 +1229,11 @@ footer p {
     left: 50%;
     transform: translateX(-50%);
     display: flex;
-    gap: 5px; /* Réduit l’espace entre les éléments */
+    gap: 5px; /* Réduit l'espace entre les éléments */
     background: rgba(255, 255, 255, 0.85);
-    padding: 2px 5px; /* Réduit l’espace interne */
-    border-radius: 5px; /* Réduit l’arrondi */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Réduit l’ombre */
+    padding: 2px 5px; /* Réduit l'espace interne */
+    border-radius: 5px; /* Réduit l'arrondi */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Réduit l'ombre */
     font-size: 0.85rem; /* Diminue la taille du texte */
     transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
     z-index: 10001;
@@ -1244,11 +1247,11 @@ footer p {
     left: 50%;
     transform: translateX(-50%);
     display: flex;
-    gap: 5px; /* Réduit l’espace entre les éléments */
-    background: rgba(255, 255, 255, 0.85);
-    padding: 2px 5px; /* Réduit l’espace interne */
-    border-radius: 5px; /* Réduit l’arrondi */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Réduit l’ombre */
+    gap: 5px; /* Réduit l'espace entre les éléments */
+    background: rgba(0, 0, 0, 0.5);
+    padding: 2px 5px; /* Réduit l'espace interne */
+    border-radius: 5px; /* Réduit l'arrondi */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Réduit l'ombre */
     font-size: 0.85rem; /* Diminue la taille du texte */
     transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
     z-index: 10001;
@@ -1300,6 +1303,10 @@ header::before {
 }
 
 /* Amélioration des cartes de compétences et projets */
+.about-content,
+.timeline-content,
+.interest-content,
+.education-content,
 .project, .skill {
   background: var(--text-light);
   border: 1px solid rgba(0,0,0,0.1);
@@ -1308,6 +1315,11 @@ header::before {
   overflow: hidden;
 }
 
+
+.about-content::before,
+.timeline-content::before,
+.interest-content::before,
+.education-content::before,
 .project::before, .skill::before {
   content: '';
   position: absolute;
@@ -1321,10 +1333,20 @@ header::before {
   z-index: 1;
 }
 
+
+.about-content:hover::before,
+.timeline-content:hover::before,
+.interest-content:hover::before,
+.education-content:hover::before,
 .project:hover::before, .skill:hover::before {
   opacity: 0.05;
 }
 
+
+.about-content:hover,
+.timeline-content:hover,
+.interest-content:hover,
+.education-content:hover,
 .project:hover, .skill:hover {
   transform: translateY(-10px);
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
@@ -1383,6 +1405,10 @@ header::before {
   background: var(--dark-bg);
 }
 
+.dark-mode .about-content,
+.dark-mode .timeline-content,
+.dark-mode .interest-content,
+.dark-mode .education-content,
 .dark-mode .project, .dark-mode .skill {
   background: #1a1a1a;
   border-color: rgba(255,255,255,0.1);
@@ -1445,7 +1471,7 @@ nav {
 h2 {
   position: relative;
   display: inline-block;
-  margin-bottom: 2rem;
+  margin-bottom: 0rem;
 }
 
 h2::after {
@@ -1463,3 +1489,8 @@ h2:hover::after {
   width: 100%;
 }
 
+#contact h2 {
+  text-align: center;
+  color: var(--medical-gray);
+  font-size: var(--font-medium);
+}
