@@ -258,7 +258,7 @@ nav {
   background: none;
   border: none;
   color: var(--text-light); /* Texte clair */
-  font-size: clamp(1.2rem, 2vw, 1.5rem); /* Taille adaptative */
+  font-size: clamp(1rem, 2vw, 1.5rem); /* Taille adaptative */
   cursor: pointer;
 }
 
@@ -1158,7 +1158,7 @@ footer p {
     display: none; /* Masqué par défaut */
     flex-direction: column;
     gap: clamp(0.5rem, 1vw, 1rem);
-    background: var(--medical-green);
+    background: var(--gradient-primary);
     padding: clamp(0.5rem, 1vw, 1rem);
     position: absolute;
     top: 3.7rem;
@@ -1205,6 +1205,47 @@ footer p {
 
   .dark-mode .profile-info p {
     font-size: 0.7rem;
+  }
+
+  #theme-toggle {
+    position: fixed;
+    top: 1.8rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: clamp(1.5rem, 2vw, 2rem); /* Taille adaptative pour les icônes */
+    cursor: pointer;
+    z-index: 10001; /* S'assure qu'il reste au-dessus des autres éléments */
+    transition: color var(--transition); /* Transition fluide pour la couleur */
+  }
+
+  /* Conteneur principal pour les boutons de traduction */
+  .language-switcher {
+    position: fixed;
+    top: 2rem;
+    left: 0.5rem; /* Début hors écran à gauche */
+    display: flex;
+    gap: 5px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 2.5px 5px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: left 0.5s ease-in-out; /* Animation de glissement depuis la gauche */
+    z-index: 10001;
+  }
+
+  .dark-mode .language-switcher {
+    position: fixed;
+    top: 2rem;
+    left: 0.5rem; /* Début hors écran à gauche */
+    display: flex;
+    gap: 5px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 2.5px 5px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: left 0.5s ease-in-out; /* Animation de glissement depuis la gauche */
+    z-index: 10001;
   }
 }
 
