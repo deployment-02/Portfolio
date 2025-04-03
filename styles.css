@@ -748,13 +748,10 @@ form button:hover {
    11. SECTION CONTACTS
    ========================================================================== */
 
-/* Section Contact */
 #contact h2 {
-  margin-bottom: 1rem; /* Espacement en bas */
-  font-size: var(--font-medium); /* Taille de police adaptative */
-  color: var(--medical-gray); /* Couleur du titre */
-  border-bottom: 1.5px solid var(--medical-green); /* Ligne horizontale */
-  padding-bottom: 0.5rem; /* Espacement entre le texte et la ligne */
+  text-align: center;
+  color: var(--medical-gray);
+  font-size: var(--font-medium);
 }
 
 .social-links a {
@@ -1172,7 +1169,7 @@ footer p {
     height: auto;
     z-index: 9999;
     box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
-    border-right: 1px solid #ccc;
+    /* border-right: 1px solid #ccc; */
     border-radius: var(--border-radius);
     font-size: 0.8rem;
   }
@@ -1213,10 +1210,10 @@ footer p {
   #theme-toggle {
     position: fixed;
     top: 0.3rem;
-    right: 1rem;
+    right: 2rem;
     background: none;
     border: none;
-    font-size: clamp(0.8rem, 1.5vw, 1.5rem); /* Taille adaptative pour les icônes */
+    font-size: 1rem; 
     cursor: pointer;
     z-index: 10001; /* S'assure qu'il reste au-dessus des autres éléments */
     transition: color var(--transition); /* Transition fluide pour la couleur */
@@ -1229,11 +1226,11 @@ footer p {
     left: 50%;
     transform: translateX(-50%);
     display: flex;
-    gap: 5px; /* Réduit l'espace entre les éléments */
+    gap: 5px; /* Réduit l’espace entre les éléments */
     background: rgba(255, 255, 255, 0.85);
-    padding: 2px 5px; /* Réduit l'espace interne */
-    border-radius: 5px; /* Réduit l'arrondi */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Réduit l'ombre */
+    padding: 2px 5px; /* Réduit l’espace interne */
+    border-radius: 5px; /* Réduit l’arrondi */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Réduit l’ombre */
     font-size: 0.85rem; /* Diminue la taille du texte */
     transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
     z-index: 10001;
@@ -1247,11 +1244,11 @@ footer p {
     left: 50%;
     transform: translateX(-50%);
     display: flex;
-    gap: 5px; /* Réduit l'espace entre les éléments */
+    gap: 5px; /* Réduit l’espace entre les éléments */
     background: rgba(0, 0, 0, 0.5);
-    padding: 2px 5px; /* Réduit l'espace interne */
-    border-radius: 5px; /* Réduit l'arrondi */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Réduit l'ombre */
+    padding: 2px 5px; /* Réduit l’espace interne */
+    border-radius: 5px; /* Réduit l’arrondi */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Réduit l’ombre */
     font-size: 0.85rem; /* Diminue la taille du texte */
     transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
     z-index: 10001;
@@ -1489,8 +1486,3 @@ h2:hover::after {
   width: 100%;
 }
 
-#contact h2 {
-  text-align: center;
-  color: var(--medical-gray);
-  font-size: var(--font-medium);
-}
