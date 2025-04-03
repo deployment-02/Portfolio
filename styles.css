@@ -1226,7 +1226,7 @@ footer p {
     left: 50%;
     transform: translateX(-50%);
     display: flex;
-    gap: 3.5px; /* Réduit l’espace entre les éléments */
+    gap: 5px; /* Réduit l’espace entre les éléments */
     background: rgba(255, 255, 255, 0.85);
     padding: 2px 5px; /* Réduit l’espace interne */
     border-radius: 5px; /* Réduit l’arrondi */
@@ -1244,7 +1244,7 @@ footer p {
     left: 50%;
     transform: translateX(-50%);
     display: flex;
-    gap: 3.5px; /* Réduit l’espace entre les éléments */
+    gap: 5px; /* Réduit l’espace entre les éléments */
     background: rgba(255, 255, 255, 0.85);
     padding: 2px 5px; /* Réduit l’espace interne */
     border-radius: 5px; /* Réduit l’arrondi */
