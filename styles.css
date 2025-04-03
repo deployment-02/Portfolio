@@ -1330,7 +1330,7 @@ header::before {
   z-index: 1;
 }
 
-
+#nav-links:hover::before,
 .about-content:hover::before,
 .timeline-content:hover::before,
 .interest-content:hover::before,
