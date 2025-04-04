@@ -30,16 +30,14 @@
 
   /* Tailles de police adaptatives */
   --font-large: clamp(1.8rem, 3vw, 2.5rem);
-  --font-medium: clamp(1.2rem, 2vw, 1.8rem);
-  --font-small: clamp(0.9rem, 1.5vw, 1.2rem);
+  --font-medium: clamp(1rem, 2vw, 2.5rem);
+  --font-small: clamp(0.6rem, 1vw, 1.3rem);
 
   /* Espacements adaptatifs */
   --section-padding: clamp(2rem, 4vw, 4rem);
   --card-radius: 3.5px; /* Rayon des coins pour les cartes */
 
   --section-padding: 1rem;
-  --font-medium: clamp(1rem, 2vw, 2.5rem);
-  --font-small: clamp(0.6rem, 1vw, 1.3rem);
   --medical-gray: #4a4a4a;
   --medical-blue: #0077b5;
   --medical-green: #00bfa5;
@@ -517,7 +515,7 @@ nav {
   background: var(--light-bg);
   padding: 1.5rem;
   text-align: center;
-  border: 1.5px solid var(--medical-green);
+  border: 1px solid rgba(0,0,0,0.1);
   border-radius: var(--card-radius) var(--card-radius) 0 0;
   border-bottom: none;
   position: relative;  /* Nécessaire pour positionner les flèches */
@@ -650,7 +648,7 @@ nav {
   background: var(--text-light); /*#e6f7ff;  couleur de fond */
   padding: var(--section-padding); /* Espacement adaptatif */
   text-align: center; /* Alignement centré */
-  border: 1px solid var(--medical-green); /* Bordure sur tous les côtés */
+  border: 1px solid rgba(0,0,0,0.1);
   border-radius: 0 0 var(--card-radius) var(--card-radius); /* Pas d'arrondi en haut */
   /* border-top: none;  Supprime la bordure en haut */
 }
@@ -935,7 +933,11 @@ footer p {
 
 .dark-mode #linkedin,
 .dark-mode #cv {
-  border: 1.5px solid var(--medical-gray); /* Bordure sur tous les côtés */
+  border: 1px solid rgba(255,255,255,0.1); /* Bordure sur tous les côtés */
+}
+
+.dark-mode #linkedin {
+  border-bottom: none;
 }
 
 .dark-mode #about h3, 
@@ -1344,8 +1346,9 @@ header::before {
 .timeline-content:hover,
 .interest-content:hover,
 .education-content:hover,
-.project:hover, .skill:hover {
-  transform: translateY(-10px);
+.project:hover, .skill:hover 
+.linkedin-post:hover, .cv-content:hover {
+  transform: translateY(-1px);
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
 }
 
