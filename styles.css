@@ -1240,7 +1240,7 @@ footer p {
 
   .dark-mode .language-switcher {
     position: fixed;
-    top: 0.25rem;
+    top: 0.2rem;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
