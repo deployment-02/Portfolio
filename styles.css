@@ -390,11 +390,11 @@ nav {
 #education h2, 
 #experience h2, 
 #interests h2{
-  margin-bottom: 1rem; /* Espacement en bas */
+  margin-bottom: 0.5rem; /* Espacement en bas */
   font-size: var(--font-medium); /* Taille de police adaptative */
-  border-bottom: 1.5px solid var(--medical-green); /* Ligne horizontale */
+  border-bottom: 1px solid var(--medical-green); /* Ligne horizontale */
   color: var(--medical-gray); /* Couleur du titre */
-  padding-bottom: 0.5rem; /* Espacement entre le texte et la ligne */
+  /*padding-bottom: 0.5rem; /* Espacement entre le texte et la ligne */
 }
 
 #about h3, 
@@ -425,7 +425,7 @@ nav {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Ajuster colonnes automatiquement */
   gap: clamp(1rem, 1.5vw, 1.5rem); /* Espace entre les éléments */
-  margin-top: clamp(1rem, 2vw, 2rem); /* Espacement en haut */
+  margin-top: 1rem; /* Espacement en haut */
 }
 
 .project,
@@ -463,15 +463,15 @@ nav {
 
 #projects h2, 
 #skills h2 {
-  border-bottom: 1.5px solid var(--medical-green); /* Ligne horizontale */
+  border-bottom: 1px solid var(--medical-green); /* Ligne horizontale */
   font-size: var(--font-medium); /* Taille de police adaptative */
   color: var(--medical-gray);  /* Couleur du titre */
-  padding-bottom: 0.5rem; /* Espacement entre le texte et la ligne */
+  /*padding-bottom: 0.5rem; /* Espacement entre le texte et la ligne */
 }
 
 .project h3, 
 .skill h3 {
-  margin-bottom: 1rem; /* Espacement en bas */
+  margin-bottom: 0.5rem; /* Espacement en bas */
   font-size: var(--font-small); /* Taille de police adaptative */
   color: var(--medical-green); /* Couleur du titre */
   border-left: 5px solid var(--medical-gray);
@@ -1052,6 +1052,7 @@ footer p {
 
 .dark-mode .lang-btn {
   background: rgba(26, 26, 26, 0); /* Noir à 50% d'opacité */
+  border: 1px solid rgba(0,0,0,0.1);
   color: var(--light-bg);
 }
 
@@ -1230,6 +1231,7 @@ footer p {
     display: flex;
     gap: 5px; /* Réduit l’espace entre les éléments */
     background: rgba(255, 255, 255, 0.85);
+    border: 1px solid rgba(0,0,0,0.1);
     padding: 2px 5px; /* Réduit l’espace interne */
     border-radius: 5px; /* Réduit l’arrondi */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Réduit l’ombre */
@@ -1248,12 +1250,24 @@ footer p {
     display: flex;
     gap: 5px; /* Réduit l’espace entre les éléments */
     background: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255,255,255,0.1);
     padding: 2px 5px; /* Réduit l’espace interne */
     border-radius: 5px; /* Réduit l’arrondi */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Réduit l’ombre */
     font-size: 0.85rem; /* Diminue la taille du texte */
     transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
     z-index: 10001;
+}
+
+h2::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 50px;
+  height: 2px;
+  background: var(--gradient-primary);
+  transition: width 0.3s ease;
 }
 
 
@@ -1346,7 +1360,7 @@ header::before {
 .timeline-content:hover,
 .interest-content:hover,
 .education-content:hover,
-.project:hover, .skill:hover 
+.project:hover, .skill:hover, 
 .linkedin-post:hover, .cv-content:hover {
   transform: translateY(-1px);
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
