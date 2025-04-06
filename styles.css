@@ -1038,6 +1038,7 @@ footer p {
   display: flex;
   gap: 6px;
   background: var(--medical-gray); /* Noir avec 70% d'opacité */
+  border: 1px solid rgba(255,255,255,0.1);
   padding: 5px 6px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: left 0.5s ease-in-out; /* Animation de glissement depuis la gauche */
@@ -1154,6 +1155,10 @@ footer p {
 
   #cv p {
     font-size: 0.8rem;
+  }
+
+  .profile-header {
+    margin-top: 2rem;
   }
 
   /* Affichage du bouton de menu pour les petits écrans */
