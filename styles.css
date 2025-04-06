@@ -240,11 +240,12 @@ nav {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   color: var(--text-light); /* Texte clair */
   padding: clamp(0.5rem, 1vw, 1rem) 0; /* Espacement vertical adaptatif */
+  text-align: center;
 }
 
 .nav-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   max-width: 1200px; /* Largeur maximale centrée */
   margin: 0 auto; /* Centrage horizontal */
@@ -1080,6 +1081,7 @@ footer p {
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05); /* Ombre plus douce */
   transition: left 0.5s ease-in-out;
   font-size: var(--font-small); /* Texte plus petit */
+  font-weight: bold;
   z-index: 1000;
 }
 
@@ -1161,6 +1163,15 @@ footer p {
     margin-top: 2rem;
   }
 
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px; /* Largeur maximale centrée */
+    margin: 0 auto; /* Centrage horizontal */
+    padding: 0 clamp(0.5rem, 1vw, 1rem); /* Espacement horizontal adaptatif */
+  }
+
   /* Affichage du bouton de menu pour les petits écrans */
   #menu-toggle {
     display: block; /* Affiche le bouton de menu */
@@ -1177,9 +1188,9 @@ footer p {
     position: absolute;
     top: 2.25rem;
     left: 0;
-    width: 25vw;
+    width: 15vw;
     max-width: 350px;
-    min-width: 200px;
+    min-width: 150px;
     height: auto;
     z-index: 9999;
     box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
