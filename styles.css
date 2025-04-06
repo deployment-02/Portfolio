@@ -1037,7 +1037,7 @@ footer p {
   left: 1rem; /* Début hors écran à gauche */
   display: flex;
   gap: 6px;
-  background: #2c2c2c; /* Noir avec 70% d'opacité */
+  background: var(--medical-gray); /* Noir avec 70% d'opacité */
   padding: 5px 6px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: left 0.5s ease-in-out; /* Animation de glissement depuis la gauche */
@@ -1072,7 +1072,7 @@ footer p {
   left: 1rem;
   display: flex;
   gap: 6px; /* Espacement encore plus réduit entre les boutons */
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.5);
   padding: 5px 6px; /* Marges internes réduites */
   border-radius: var(--card-radius); /* Coins plus discrets */
   border: 1px solid rgba(0,0,0,0.1);
@@ -1231,12 +1231,12 @@ footer p {
   /* Conteneur principal - mode clair */
 .language-switcher {
   position: fixed;
-  top: 0.15rem;
+  top: 0.2rem;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
   gap: 3px;
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.5);
   border: 1px solid rgba(0,0,0,0.1);
   padding: 1.5px 4px;
   border-radius: 3px;
@@ -1249,12 +1249,12 @@ footer p {
 /* Conteneur principal - mode sombre */
 .dark-mode .language-switcher {
   position: fixed;
-  top: 0.15rem;
+  top: 0.2rem;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
   gap: 3px;
-  background: rgba(0, 0, 0, 0.5);
+  background: var(--medical-gray);
   border: 1px solid rgba(255,255,255,0.1);
   padding: 1.5px 4px;
   border-radius: 3px;
@@ -1270,6 +1270,7 @@ footer p {
   border: none;
   font-size: 0.7rem;
   color: var(--medical-gray);
+  border: 1px solid rgba(0,0,0,0.1);
   padding: 2px 5px;
   border-radius: 2px;
   cursor: pointer;
@@ -1278,6 +1279,7 @@ footer p {
 
 .dark-mode .language-switcher .lang-btn {
   color: var(--light-bg);
+  border: 1px solid rgba(255,255,255,0.1);
 }
 
 /* Hover clair */
