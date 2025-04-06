@@ -11,40 +11,38 @@
 
 /* Variables globales pour la personnalisation */
 :root {
-  --gray-blue: #64748B; /* Gris bleuté */
-  --primary-color: #0073e6; /* Bleu médical principal */
-  --secondary-color: #005bb5; /* Bleu plus foncé */
-  --dark-bg: #121212; /* Fond sombre pour le mode sombre */
-  --light-bg: #f9f9f9; /* Fond clair par défaut */
-  --text-light: #ffffff; /* Texte clair (blanc) */
-  --text-dark: #333; /* Texte sombre (gris foncé) */
-  --medical-green: #4CAF50; /* Vert médical pour les accents */
-  --medical-blue: #2196F3; /* Bleu médical alternatif */
-  --medical-gray: #607D8B; /* Gris médical pour les arrière-plans secondaires */
-  --shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre légère pour les éléments */
-  --transition: all 0.3s ease; /* Transition fluide pour les animations */
+  /* Couleurs principales */
+  --primary-color: #0073e6;
+  --secondary-color: #005bb5;
+  --medical-blue: #0077b5;
+  --medical-green: #00bfa5;
+  --medical-gray: #4a4a4a;
+  --gray-blue: #64748B;
+
+  /* Thème clair/sombre */
+  --dark-bg: #121212;
+  --light-bg: #f9f9f9;
+  --text-light: #ffffff;
+  --text-dark: #333;
+
+  /* Effets visuels */
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --transition: 0.3s ease-in-out;
+  --card-radius: 3.5px;
+
+  /* Dégradés */
   --gradient-primary: linear-gradient(135deg, var(--medical-blue), var(--medical-green));
   --gradient-dark: linear-gradient(135deg, #2c3e50, #3498db);
   --gradient-light: linear-gradient(135deg, #e0f7fa, #b2ebf2);
-  --animation-timing: 0.5s;
 
-  /* Tailles de police adaptatives */
+  /* Typographie */
   --font-large: clamp(1.8rem, 3vw, 2.5rem);
-  --font-medium: clamp(1rem, 2vw, 2.5rem);
-  --font-small: clamp(0.6rem, 1vw, 1.3rem);
+  --font-medium: clamp(0.8rem, 1.3vw, 1.5rem);
+  --font-small: clamp(0.8rem, 1vw, 1.3rem);
 
-  /* Espacements adaptatifs */
-  --section-padding: clamp(2rem, 4vw, 4rem);
-  --card-radius: 3.5px; /* Rayon des coins pour les cartes */
-
+  /* Espacements */
   --section-padding: 1rem;
-  --medical-gray: #4a4a4a;
-  --medical-blue: #0077b5;
-  --medical-green: #00bfa5;
-  --text-light: #ffffff;
-  --text-white: #ffffff;
-  --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  --transition: 0.3s ease-in-out;
+  --animation-timing: 0.5s;
 }
 
 /* Styles de base pour le corps de la page */
@@ -67,23 +65,21 @@ body {
   right: 1rem;
   background: none;
   border: none;
-  font-size: clamp(1rem, 1.5vw, 1.5rem); /* Taille adaptative pour les icônes */
+  font-size: clamp(1rem, 1.5vw, 1.5rem);
   cursor: pointer;
-  z-index: 1000; /* S'assure qu'il reste au-dessus des autres éléments */
-  transition: color var(--transition); /* Transition fluide pour la couleur */
+  z-index: 1000;
+  transition: color var(--transition);
 }
 
-/* Icône du mode clair */
+/* Icônes du thème */
 .light-icon {
-  display: inline-block; /* Visible par défaut */
+  display: inline-block;
 }
 
-/* Icône du mode sombre */
 .dark-icon {
-  display: none; /* Masquée par défaut */
+  display: none;
 }
 
-/* En mode sombre, masquer l'icône du soleil et afficher celle de la lune */
 .dark-mode .light-icon {
   display: none;
 }
@@ -98,7 +94,7 @@ body {
 
 /* Style global pour l'en-tête */
 header {
-  background: #f0f2f5; /* Couleur de fond uniforme pour le mode clair */
+  background: #f0f2f5;
   position: relative;
   color: var(--medical-gray);
   text-align: center;
@@ -106,7 +102,7 @@ header {
 }
 
 .dark-mode header {
-  background: #2c2c2c; /* Couleur de fond uniforme pour le mode sombre */
+  background: #2c2c2c;
   color: var(--light-bg);
 }
 
@@ -147,7 +143,7 @@ header::before {
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
 }
 
-/* Informations personnelles - Nom avec effet de gradient */
+/* Informations personnelles */
 .profile-info h1 {
   font-size: clamp(1rem, 2vw, 2.5rem);
   font-weight: bold;
@@ -158,18 +154,6 @@ header::before {
 
 .dark-mode .profile-info h1 {
   color: var(--light-bg);
-}
-
-/* Animation d'apparition fluide */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 /* Description sous le nom */
@@ -225,10 +209,6 @@ header::before {
 /* ==========================================================================
    4. NAVIGATION
    ========================================================================== */
-:root{
-  --font-medium: clamp(0.8rem, 1.3vw, 1.5rem);
-  --font-small: clamp(0.8rem, 1vw, 1.3rem);
-}
 
 /* Barre de navigation */
 nav {
@@ -237,8 +217,8 @@ nav {
   top: 0;
   z-index: 1000;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  color: var(--text-light); /* Texte clair */
-  padding: clamp(0.5rem, 1vw, 1rem) 0; /* Espacement vertical adaptatif */
+  color: var(--text-light);
+  padding: clamp(0.5rem, 1vw, 1rem) 0;
   text-align: center;
 }
 
@@ -246,9 +226,9 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 1200px; /* Largeur maximale centrée */
-  margin: 0 auto; /* Centrage horizontal */
-  padding: 0 clamp(0.5rem, 1vw, 1rem); /* Espacement horizontal adaptatif */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 clamp(0.5rem, 1vw, 1rem);
 }
 
 /* Bouton de menu pour mobile */
@@ -297,20 +277,21 @@ nav {
 /* ==========================================================================
    5. CONTENEUR PRINCIPAL ET SECTIONS
    ========================================================================== */
+
 /* Conteneur principal centré */
 .container {
-  max-width: 1200px; /* Largeur maximale */
-  margin: 0 auto; /* Centrage horizontal */
-  padding: var(--section-padding); /* Espacement adaptatif */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--section-padding);
 }
 
-/* Styles pour les sections avec timeline */
+/* Styles communs pour les sections avec timeline */
 .about-timeline,
 .timeline,
 .interests-timeline {
   display: flex;
   flex-direction: column;
-  gap: clamp(1rem, 2vw, 2rem); /* Espace entre les éléments */
+  gap: clamp(1rem, 2vw, 2rem);
   position: relative;
 }
 
@@ -323,9 +304,9 @@ nav {
   top: 0;
   bottom: 0;
   left: 2.25%;
-  width: 1px; /* Épaisseur de la ligne */
-  background: var(--medical-green); /* Couleur de la ligne */
-  transform: translateX(-50%); /* Centrage précis */
+  width: 1px;
+  background: var(--medical-green);
+  transform: translateX(-50%);
 }
 
 /* Éléments individuels dans les timelines */
@@ -335,7 +316,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: clamp(1rem, 2vw, 2rem); /* Espace entre l'icône et le contenu */
+  gap: clamp(1rem, 2vw, 2rem);
   position: relative;
   animation: fadeInUp 0.6s ease forwards;
   opacity: 0;
@@ -349,53 +330,56 @@ nav {
 .about-icon,
 .timeline-icon,
 .interest-icon {
-  background: #ffffff; /* Couleur de fond */
-  color: var(--text-light); /* Couleur de l'icône */
-  width: clamp(40px, 6vw, 50px); /* Taille adaptative */
+  background: #ffffff;
+  color: var(--text-light);
+  width: clamp(40px, 6vw, 50px);
   height: clamp(40px, 6vw, 50px);
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 50%; /* Forme circulaire */
-  font-size: clamp(1rem, 1.5vw, 1.5rem); /* Taille de l'icône */
-  box-shadow: var(--shadow); /* Ombre légère */
+  border-radius: 50%;
+  font-size: clamp(1rem, 1.5vw, 1.5rem);
+  box-shadow: var(--shadow);
 }
 
 /* Contenu des éléments de timeline */
 .about-content,
 .timeline-content,
 .interest-content {
-  background: var(--text-light); /* Fond clair */
-  padding: clamp(1rem, 1.5vw, 1.5rem); /* Espacement interne */
-  border-radius: var(--card-radius); /* Coins non arrondis */
-  box-shadow: var(--shadow); /* Ombre légère */
-  flex: 1; /* Remplit l'espace disponible */
-  transition: transform var(--transition), box-shadow var(--transition); /* Transition fluide */
+  background: var(--text-light);
+  padding: clamp(1rem, 1.5vw, 1.5rem);
+  border-radius: var(--card-radius);
+  box-shadow: var(--shadow);
+  flex: 1;
+  transition: transform var(--transition), box-shadow var(--transition);
 }
 
 /* Effet au survol du contenu */
 .about-content:hover,
 .timeline-content:hover,
 .interest-content:hover {
-  transform: translateY(-5px); /* Légère translation vers le haut */
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Ombre plus prononcée */
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
 }
 
-#about h3, #education h3, #experience h3, #interests h3{
-  font-size: var(--font-small); /* Taille de police adaptative */
-  margin-bottom: 1rem; /* Espacement en bas */
-  color: var(--medical-green); /* Couleur du titre */
+/* Titres de section */
+#about h3, 
+#education h3, 
+#experience h3, 
+#interests h3 {
+  font-size: var(--font-small);
+  margin-bottom: 1rem;
+  color: var(--medical-green);
 }
 
 #about h2, 
 #education h2, 
 #experience h2, 
-#interests h2{
-  margin-bottom: 0.5rem; /* Espacement en bas */
-  font-size: var(--font-medium); /* Taille de police adaptative */
-  border-bottom: 1px solid var(--medical-green); /* Ligne horizontale */
-  color: var(--medical-gray); /* Couleur du titre */
-  /*padding-bottom: 0.5rem; /* Espacement entre le texte et la ligne */
+#interests h2 {
+  margin-bottom: 0.5rem;
+  font-size: var(--font-medium);
+  border-bottom: 1px solid var(--medical-green);
+  color: var(--medical-gray);
 }
 
 #about h3, 
@@ -406,14 +390,14 @@ nav {
 #skills h3,
 #linkedin h3,
 #cv h3, 
-#contact h3{
-  color: var(--medical-gray); /* Titre vert */
+#contact h3 {
+  color: var(--medical-gray);
 }
 
 #about-content p,
 #timeline-content p,
 #interest-content p {
-  font-size: var(--font-small); /* Taille de police adaptative */
+  font-size: var(--font-small);
 }
 
 /* ==========================================================================
@@ -424,23 +408,24 @@ nav {
 .skills-grid,
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Ajuster colonnes automatiquement */
-  gap: clamp(1rem, 1.5vw, 1.5rem); /* Espace entre les éléments */
-  margin-top: 1rem; /* Espacement en haut */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: clamp(1rem, 1.5vw, 1.5rem);
+  margin-top: 1rem;
 }
 
 .project,
 .skill {
   background: var(--text-light);
-  padding: 0.5rem; /* Espacement interne */
-  border-radius: var(--card-radius); /* Coins npn arrondis */
-  box-shadow: var(--shadow); /* Ombre légère */
+  padding: 0.5rem;
+  border-radius: var(--card-radius);
+  box-shadow: var(--shadow);
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
 }
 
-.project::before, .skill::before {
+.project::before, 
+.skill::before {
   content: '';
   position: absolute;
   top: 0;
@@ -453,28 +438,29 @@ nav {
   z-index: 1;
 }
 
-.project:hover::before, .skill:hover::before {
+.project:hover::before, 
+.skill:hover::before {
   opacity: 0.05;
 }
 
-.project:hover, .skill:hover {
+.project:hover, 
+.skill:hover {
   transform: translateY(-10px);
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
 }
 
 #projects h2, 
 #skills h2 {
-  border-bottom: 1px solid var(--medical-green); /* Ligne horizontale */
-  font-size: var(--font-medium); /* Taille de police adaptative */
-  color: var(--medical-gray);  /* Couleur du titre */
-  /*padding-bottom: 0.5rem; /* Espacement entre le texte et la ligne */
+  border-bottom: 1px solid var(--medical-green);
+  font-size: var(--font-medium);
+  color: var(--medical-gray);
 }
 
 .project h3, 
 .skill h3 {
-  margin-bottom: 0.5rem; /* Espacement en bas */
-  font-size: var(--font-small); /* Taille de police adaptative */
-  color: var(--medical-green); /* Couleur du titre */
+  margin-bottom: 0.5rem;
+  font-size: var(--font-small);
+  color: var(--medical-green);
   border-left: 5px solid var(--medical-gray);
   padding-left: 10px;
 }
@@ -482,7 +468,7 @@ nav {
 #skill ul li p,
 #skills-grid #skill p,
 #projects-grid #project p {
-  font-size: var(--font-small); /* Taille de police adaptative */
+  font-size: var(--font-small);
 }
 
 .skills-grid {
@@ -501,10 +487,10 @@ nav {
 }
 
 #projects .projects-grid .project img {
-  width: 100%; /* Assurez-vous que l'image prend toute la largeur */
-  height: auto; /* Garde le ratio de l'image */
-  border-radius: var(--card-radius); /* Applique les mêmes styles aux images */
-  margin-bottom: 10px; /* Espacement entre l'image et le titre */
+  width: 100%;
+  height: auto;
+  border-radius: var(--card-radius);
+  margin-bottom: 10px;
 }
 
 /* ==========================================================================
@@ -588,7 +574,7 @@ nav {
 }
 
 .linkedin-post:hover {
-  transform: translateY(-5px);
+  transform: translateY(-1px);
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
 }
 
@@ -983,7 +969,7 @@ footer p {
 }
 
 .dark-mode .post-link {
-  background: var(--gradient-dark);
+  background: var(--medical-gray);
   color: var(--text-light);
 }
 
@@ -1047,7 +1033,7 @@ footer p {
 
 .dark-mode .lang-btn:hover {
   color: var(--light-bg);
-  background: rgba(26, 26, 26, 0);
+  background: rgba(0, 0, 0, 0.2);
   border-radius: var(--card-radius);
 }
 
@@ -1058,7 +1044,7 @@ footer p {
 }
 
 .dark-mode .lang-btn.active-lang {
-  background: var(--gradient-dark); /* Gris clair */
+  background: var(--medical-blue); /* Gris clair */
   color: var(--light-bg); /* Texte noir pour plus de contraste */
 }
 
@@ -1067,12 +1053,12 @@ footer p {
    ========================================================================== */
 
  /* Conteneur principal pour les boutons de traduction */
-.language-switcher {
+ .language-switcher {
   position: fixed;
   top: 0.5rem;
   left: 1rem;
   display: flex;
-  gap: 8px; /* Un peu plus d’espacement entre les boutons */
+  gap: 8px; /* Un peu plus d'espacement entre les boutons */
   background: rgba(255, 255, 255, 0.5);
   padding: 7px 12px; /* Marges internes légèrement augmentées */
   border-radius: 50px;
@@ -1207,7 +1193,7 @@ footer p {
 
   #nav-links li:last-child {
     border-bottom: none; /* Supprime le trait après le dernier lien */
-    margin-bottom: 0; /* Supprime l’espace inutile */
+    margin-bottom: 0; /* Supprime l'espace inutile */
   }
 
 
@@ -1332,9 +1318,10 @@ footer p {
 }
 
 .dark-mode .language-switcher .lang-btn.active-lang {
-  background: var(--gradient-dark);
+  background: var(--medical-blue);
   color: var(--light-bg);
   padding: 3px 7px;
+  border: none;
 }
 
 
@@ -1508,7 +1495,7 @@ header::before {
 }
 
 .dark-mode .cv-button, .dark-mode .post-link {
-  background: var(--gradient-dark);
+  background: var(--medical-blue);
 }
 
 /* Amélioration de la section LinkedIn */
@@ -1518,7 +1505,7 @@ header::before {
 }
 
 .linkedin-post:hover {
-  transform: translateY(-5px);
+  transform: translateY(-1px);
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
 }
 
@@ -1581,4 +1568,22 @@ h2::after {
 h2:hover::after {
   width: 100%;
 }
+
+/* Empêche le centrage du titre de la section #contact */
+#contact h2 {
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+}
+
+#contact h2::after {
+  background: none;
+}
+
+#contact h2:hover::after {
+  width: 100%;
+}
+
+
+
 
