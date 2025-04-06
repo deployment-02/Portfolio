@@ -1182,6 +1182,8 @@ footer p {
   #nav-links {
     display: none; /* Masqué par défaut */
     flex-direction: column;
+    justify-content: flex-start; /* Aligne les éléments en haut */
+    align-items: flex-start; /* Garde les éléments alignés à gauche */
     gap: clamp(0.5rem, 1vw, 1rem);
     background: var(--gradient-primary);
     padding: clamp(0.5rem, 1vw, 1rem);
@@ -1194,10 +1196,22 @@ footer p {
     height: auto;
     z-index: 9999;
     box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
-    /* border-right: 1px solid #ccc; */
     border-radius: var(--border-radius);
     font-size: 0.8rem;
   }
+
+  #nav-links li {
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Trait discret entre les liens */
+    padding-bottom: 0.2rem;
+    margin-bottom: 0.2rem;
+  }
+
+  #nav-links li:last-child {
+    border-bottom: none; /* Supprime le trait après le dernier lien */
+    margin-bottom: 0; /* Supprime l’espace inutile */
+  }
+
 
   /* Affichage des liens lorsque le menu est actif */
   #nav-links.active {
