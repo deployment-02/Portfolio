@@ -162,7 +162,7 @@ header::before {
   color: var(--medical-gray);
   background: rgba(255, 255, 255, 0.5);
   border: 1px solid rgba(0, 0, 0, 0.05);
-  padding: 7px 12px;
+  padding: 15px 15px;
   border-radius: 50px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
   backdrop-filter: blur(5px);
@@ -258,6 +258,10 @@ nav {
   overflow: hidden;
 }
 
+#nav-links li a:hover {
+  background: var(--gradient-dark);
+}
+
 #nav-links li a::after {
   content: '';
   position: absolute;
@@ -305,7 +309,7 @@ nav {
   bottom: 0;
   left: 2.25%;
   width: 1px;
-  background: var(--medical-green);
+  background: var(--gradient-primary);
   transform: translateX(-50%);
 }
 
@@ -378,7 +382,7 @@ nav {
 #interests h2 {
   margin-bottom: 0.5rem;
   font-size: var(--font-medium);
-  border-bottom: 1px solid var(--medical-green);
+  /* border-bottom: 1px solid var(--medical-green); */
   color: var(--medical-gray);
 }
 
@@ -451,7 +455,7 @@ nav {
 
 #projects h2, 
 #skills h2 {
-  border-bottom: 1px solid var(--medical-green);
+  /* border-bottom: 1px solid var(--medical-green); */
   font-size: var(--font-medium);
   color: var(--medical-gray);
 }
@@ -817,7 +821,7 @@ footer p {
 }
 
 .dark-mode #nav-links li a:hover {
-  background: var(--gradient-dark); /* Changement de couleur */
+  background: var(--medical-blue); /* Changement de couleur */
 }
 
 /* Icônes des réseaux sociaux en mode sombre */
@@ -905,14 +909,14 @@ footer p {
   color: var(--light-bg); /* Titre blanc */
 }
 
-.dark-mode #about h2, 
+/* .dark-mode #about h2, 
 .dark-mode #education h2, 
 .dark-mode #experience h2, 
 .dark-mode #interests h2,
 .dark-mode #projects h2, 
 .dark-mode  #skills h2 {
   border-bottom: 1.5px solid var(--medical-gray); /* Ligne horizontale */
-}
+ */
 
 /* .dark-mode #linkedin h2{
   border-bottom: 1px solid #e6f7ff; /* Ligne horizontale */
@@ -1143,6 +1147,14 @@ footer p {
     font-size: 0.8rem;
   }
 
+  .profile-info p {
+    padding: 6px 6px;
+    border-radius: 100px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    backdrop-filter: blur(5px);
+    font-size: 0.8rem;
+  }
+
   .profile-header {
     margin-top: 2rem;
   }
@@ -1189,6 +1201,14 @@ footer p {
     border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Trait discret entre les liens */
     padding-bottom: 0.2rem;
     margin-bottom: 0.2rem;
+  }
+
+  #nav-links li a:hover {
+    background: var(--gradient-dark);
+  }
+
+  .dark-mode #nav-links li a:hover {
+    background: var(--medical-blue);
   }
 
   #nav-links li:last-child {
@@ -1250,7 +1270,7 @@ footer p {
   transform: translateX(-50%);
   display: flex;
   gap: 4px;
-  background: rgba(255, 255, 255, 0.5);
+  background: var(--light-bg);
   border: 1px solid rgba(0,0,0,0.1);
   padding: 1.5px 10px;
   border-radius: 50px;
@@ -1268,7 +1288,7 @@ footer p {
   transform: translateX(-50%);
   display: flex;
   gap: 4px;
-  background: var(--medical-gray);
+  background: var(--dark-bg);
   border: 1px solid rgba(255,255,255,0.1);
   padding: 1.5px 10px;
   border-radius: 50px;
@@ -1284,7 +1304,7 @@ footer p {
   border: none;
   font-size: 0.7rem;
   color: var(--medical-gray);
-  border: 1px solid rgba(0,0,0,0.2);
+  border: 1px solid var(--medical-green);
   padding: 2px 5px;
   border-radius: 2px;
   cursor: pointer;
@@ -1325,17 +1345,15 @@ footer p {
 }
 
 
+/* Amélioration des titres de section */
 h2::after {
-  content: '';
-  position: absolute;
-  bottom: -5px;
-  left: 0;
-  width: 50px;
   height: 2px;
-  background: var(--gradient-dark);
-  transition: width 0.3s ease;
 }
 
+h
+#contact h2::after {
+  height: 2px;
+}
 
 }
 
@@ -1559,7 +1577,7 @@ h2::after {
   position: absolute;
   bottom: -5px;
   left: 0;
-  width: 50px;
+  width: 100%;
   height: 3px;
   background: var(--gradient-primary);
   transition: width 0.3s ease;
@@ -1569,20 +1587,29 @@ h2:hover::after {
   width: 100%;
 }
 
-/* Empêche le centrage du titre de la section #contact */
+
+#contact {
+  text-align: center; /* Centre le h2 dans son parent */
+}
+
 #contact h2 {
-  display: block;
-  text-align: center;
+  position: relative; /* pour que ::after se base dessus */
+  display: inline-block; /* pour que h2 prenne la taille de son contenu */
   margin: 0 auto;
 }
 
 #contact h2::after {
-  background: none;
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%; /* prend 100% de la largeur de h2 (le texte seulement) */
+  height: 3px;
+  background: var(--gradient-primary);
+  transition: width 0.3s ease;
 }
 
-#contact h2:hover::after {
-  width: 100%;
-}
+
 
 
 
