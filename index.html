@@ -68,14 +68,14 @@
           <div class="about-icon">💡</div>
           <div class="about-content">
             <h3 id="about-passion-title">Passion</h3>
-            <p id="about-passion-content">Porté par une passion pour l’intelligence artificielle et l’analyse de données, j’aime exploiter les données pour résoudre des problèmes concrets et apporter des solutions innovantes.</p>
+            <p id="about-passion-content">Porté par une passion pour l'intelligence artificielle et l'analyse de données, j'aime exploiter les données pour résoudre des problèmes concrets et apporter des solutions innovantes.</p>
           </div>
         </div>
         <div class="about-item">
           <div class="about-icon">🎯</div>
           <div class="about-content">
             <h3 id="about-objectif-title">Objectif</h3>
-            <p id="about-objectif-content">Mon objectif est d’exploiter mes compétences en science des données et intelligence artificielle pour relever des défis réels et contribuer à des projets à fort impact.</p>
+            <p id="about-objectif-content">Mon objectif est d'exploiter mes compétences en science des données et intelligence artificielle pour relever des défis réels et contribuer à des projets à fort impact.</p>
           </div>
         </div>
       </div>
@@ -384,7 +384,7 @@
     <section id="cv" class="container">
       <h2 id="cv-title">Télécharger mon CV</h2>
       <p id="cv-content">Pour plus de détails sur mon parcours académique et professionnel, vous pouvez télécharger mon CV ci-dessous :</p>
-      <a href="https://drive.google.com/file/d/1gAuTS8zBRtgZwwAhH4c35UrZvlw3ySv8/view?usp=sharing" download class="cv-button">
+      <a href="#" id="cv-link" class="cv-button">
         <i class="fas fa-file-pdf"></i> <span id="cv-download">Télécharger CV</span>
       </a>
     </section>
@@ -455,9 +455,9 @@
         "about-parcours-title": "Parcours",
         "about-parcours-content": "Actuellement en 3ᵉ année de Génie Informatique à l'Institut Ucac-Icam de Douala, je suis titulaire d'une licence en informatique spécialisée en Science des Données.",
         "about-passion-title": "Passion",
-        "about-passion-content": "Porté par une passion pour l’intelligence artificielle et l’analyse de données, j’aime exploiter les données pour résoudre des problèmes concrets et apporter des solutions innovantes.",
+        "about-passion-content": "Porté par une passion pour l'intelligence artificielle et l'analyse de données, j'aime exploiter les données pour résoudre des problèmes concrets et apporter des solutions innovantes.",
         "about-objectif-title": "Objectif",
-        "about-objectif-content": "Mon objectif est d’exploiter mes compétences en science des données et intelligence artificielle pour relever des défis réels et contribuer à des projets à fort impact.",
+        "about-objectif-content": "Mon objectif est d'exploiter mes compétences en science des données et intelligence artificielle pour relever des défis réels et contribuer à des projets à fort impact.",
         "education-title": "Mon cursus",
         "education-engineering-title": "Génie Informatique",
         "education-engineering-content": "Institut Ucac-Icam, Douala (Cameroun)",
@@ -544,7 +544,8 @@
         "cv-content": "Pour plus de détails sur mon parcours académique et professionnel, vous pouvez télécharger mon CV ci-dessous :",
         "cv-download": "Télécharger CV",
         "contact-title": "Contactez-moi",
-        "footer-text": "© 2025 Layibé Yayibé Narcisse. Tous droits réservés."
+        "footer-text": "© 2025 Layibé Yayibé Narcisse. Tous droits réservés.",
+        "cv-link": "https://drive.google.com/file/d/1gAuTS8zBRtgZwwAhH4c35UrZvlw3ySv8/view?usp=sharing"
       },
       "en": {
         "profile-name": "LAYIBE YAYIBE Narcisse",
@@ -651,11 +652,12 @@
         "cv-content": "For more details about my academic and professional journey, you can download my resume below:",
         "cv-download": "Download Resume",
         "contact-title": "Contact me",
-        "footer-text": "© 2025 Layibe Yayibe Narcisse. All rights reserved."
+        "footer-text": "© 2025 Layibe Yayibe Narcisse. All rights reserved.",
+        "cv-link": "https://drive.google.com/file/d/1Jc1nmtYgFh035c4QfpQgcrkRUqqzfHA0/view?usp=sharing"
       }
     };
     
-    // Fonction pour changer la langue// Fonction pour changer la langue
+    // Fonction pour changer la langue
     function switchLanguage(lang) {
       // Supprimer la classe 'active-lang' de tous les boutons
       const buttons = document.querySelectorAll(".lang-btn");
@@ -674,6 +676,11 @@
           elements.forEach(element => {
             element.textContent = translations[lang][key];
           });
+        } else if (key === "cv-link") {
+          const cvLink = document.getElementById("cv-link");
+          if (cvLink) {
+            cvLink.href = translations[lang][key];
+          }
         } else {
           const element = document.getElementById(key);
           if (element) {
