@@ -915,8 +915,8 @@ footer p {
 .dark-mode #interests h2,
 .dark-mode #projects h2, 
 .dark-mode  #skills h2 {
-  border-bottom: 1.5px solid var(--medical-gray); /* Ligne horizontale */
- */
+  border-bottom: 1.5px solid var(--medical-gray); /* Ligne horizontale} */
+
 
 /* .dark-mode #linkedin h2{
   border-bottom: 1px solid #e6f7ff; /* Ligne horizontale */
