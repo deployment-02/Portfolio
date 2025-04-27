@@ -47,7 +47,7 @@
 
 /* Styles de base pour le corps de la page */
 body {
-  font-family: "Gill Sans Extrabold", sans-serif; /* Police moderne et lisible */
+  font-family: 'Inter', 'Helvetica Neue', 'Arial', sans-serif; /* Police moderne et lisible */
   line-height: 1.6; /* Hauteur de ligne confortable */
   background-color: var(--light-bg); /* Fond clair par défaut */
   color: var(--text-dark); /* Texte sombre par défaut */
