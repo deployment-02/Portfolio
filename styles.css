@@ -380,7 +380,7 @@ nav {
 #education h2, 
 #experience h2, 
 #interests h2 {
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
   font-size: var(--font-medium);
   /* border-bottom: 1px solid var(--medical-green); */
   color: var(--medical-gray);
